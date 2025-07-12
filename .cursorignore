@@ -46,7 +46,6 @@ UnityMcpServer.meta
 *.ahbuildinfo
 *.controller
 *.asmdef
-*.xml
 *.jar
 *.gradle
 *.prefab

@@ -729,6 +729,43 @@ public class Scr_Database : Photon.MonoBehaviour
         MyData.NameOrEmail = user_inpt.text;
         MyData.Pasword = pass_inpt.text;
         SaveGameFree.Saver.Save(MyData, fileName);
+
+        // --- DEV: Populate dummy units and decks with 8 real XML IdNames ---
+        string[] devUnitNames = {
+            "U_Ship_01", "U_Ship_02", "U_Ship_03", "U_Ship_04",
+            "U_Ship_05", "U_Ship_06", "U_Ship_07", "U_Ship_08"
+        };
+
+        scr_StatsPlayer.MyUnits.Clear();
+        scr_StatsPlayer.AllUnits.Clear();
+        for (int i = 0; i < 3; i++)
+        {
+            if (scr_StatsPlayer.PlayerDeck[i] == null)
+                scr_StatsPlayer.PlayerDeck[i] = new List<string>();
+            if (scr_StatsPlayer.PlayerAvUnits[i] == null)
+                scr_StatsPlayer.PlayerAvUnits[i] = new List<string>();
+            scr_StatsPlayer.PlayerDeck[i].Clear();
+            scr_StatsPlayer.PlayerAvUnits[i].Clear();
+        }
+
+        // Fill deck 0 with 8 units
+        for (int i = 0; i < devUnitNames.Length; i++)
+        {
+            var unit = new scr_UnitProgress();
+            unit.Id = i + 1;
+            unit.Name = devUnitNames[i];
+            unit.Level = 1;
+            unit.Reinf = 0;
+            unit.Skins = "Classic";
+            unit.CurrentSkin = "Classic";
+            scr_StatsPlayer.MyUnits.Add(unit);
+            scr_StatsPlayer.AllUnits.Add(unit.Name);
+
+            scr_StatsPlayer.PlayerDeck[0].Add(unit.Name);
+            scr_StatsPlayer.PlayerAvUnits[0].Add(unit.Name);
+        }
+        // -------------------------------------------
+
         StateTextLog.text = "DEV LOGIN SUCCESS";
         StateTextLog.color = Color.green;
         LoadAllXmlUnitsAndEnter();
