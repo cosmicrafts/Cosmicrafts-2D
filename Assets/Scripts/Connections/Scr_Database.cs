@@ -48,6 +48,8 @@ public class Scr_Database : Photon.MonoBehaviour
 
     List<string> UDB; //UNIDADES DESCARGADAS DEL PERFIL DE USUARIO
 
+    public static bool DEV_BYPASS = true; // Set to false for real login
+
     void Awake()
     {
         isLoggedIn = false;
@@ -138,6 +140,13 @@ public class Scr_Database : Photon.MonoBehaviour
         scr_control.LogWithGP.SetActive(true);
 #endif
 
+    if (DEV_BYPASS)
+    {
+        user_inpt.text = "devuser";
+        pass_inpt.text = "devpass";
+        StartCoroutine(DevBypassLogin());
+        return; // Skip the rest of Start() if bypassing
+    }
 
         if (!scr_StatsPlayer.MobileDevice)
             scr_control.PanelSocialLog.SetActive(false);
@@ -372,7 +381,11 @@ public class Scr_Database : Photon.MonoBehaviour
 
     public void Registrar()
     {
-
+        if (DEV_BYPASS)
+        {
+            StartCoroutine(DevBypassLogin());
+            return;
+        }
         bool okdata = true;
         scr_control.Name_State.text = "";
         //check user name
@@ -411,6 +424,11 @@ public class Scr_Database : Photon.MonoBehaviour
 
     public void LogIn()
     {
+        if (DEV_BYPASS)
+        {
+            StartCoroutine(DevBypassLogin());
+            return;
+        }
         StateTextLog.text = "";
         bool okdata = true;
 
@@ -702,6 +720,18 @@ public class Scr_Database : Photon.MonoBehaviour
             ActiveInputsLog();
             isLoggedIn = false;
         }
+    }
+
+    IEnumerator DevBypassLogin()
+    {
+        yield return new WaitForSeconds(0.5f); // Simulate delay
+        isLoggedIn = true;
+        MyData.NameOrEmail = user_inpt.text;
+        MyData.Pasword = pass_inpt.text;
+        SaveGameFree.Saver.Save(MyData, fileName);
+        StateTextLog.text = "DEV LOGIN SUCCESS";
+        StateTextLog.color = Color.green;
+        LoadAllXmlUnitsAndEnter();
     }
 
     void LoadAllXmlUnitsAndEnter()
