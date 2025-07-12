@@ -57,14 +57,26 @@ public class scr_BDUpdate : MonoBehaviour {
         StartCoroutine(IELogout());
     }
 
+    private static bool ShouldBypassNetwork(string methodName)
+    {
+        if (Scr_Database.DEV_BYPASS)
+        {
+            Debug.Log("DEV_BYPASS: Skipping server call: " + methodName);
+            return true;
+        }
+        return false;
+    }
+
     public static void f_CheckEmailExist(string email)
     {
+        if (ShouldBypassNetwork(nameof(f_CheckEmailExist))) return;
         Debug.Log("Request for exist email");
         SDBUP.StartCoroutine(SDBUP.CheckEmailExist(email));
     }
 
     public static void f_GetInfoUser(string _nameuser, bool addfrienddata)
     {
+        if (ShouldBypassNetwork(nameof(f_GetInfoUser))) return;
         if (_nameuser.Length >= 4)
         {
             Debug.Log("Request for Get User Info Send");
@@ -78,12 +90,14 @@ public class scr_BDUpdate : MonoBehaviour {
 
     public static void f_GetHistoryMatchs(int idaccount, int idfriend)
     {
+        if (ShouldBypassNetwork(nameof(f_GetHistoryMatchs))) return;
         SDBUP.StartCoroutine(SDBUP.GetHistoryMatchs(idaccount, idfriend));
         Debug.Log("Request for Get History Matchs");
     }
 
     public static void f_UpdateUnit(scr_UnitProgress up)
     {
+        if (ShouldBypassNetwork(nameof(f_UpdateUnit))) return;
         if (!IsCHUnitProg)
         {
             SDBUP.StartCoroutine(SDBUP.UpdateUnit(up.Id, up.Level, up.Reinf, up.Skins, up.CurrentSkin));
@@ -93,116 +107,133 @@ public class scr_BDUpdate : MonoBehaviour {
 
     public static void f_BuyRefUnit(scr_UnitProgress up, int NewMoney)
     {
+        if (ShouldBypassNetwork(nameof(f_BuyRefUnit))) return;
         SDBUP.StartCoroutine(SDBUP.BuyRefUnit(up.Id, up.Reinf, NewMoney));
         Debug.Log("Request for Unit Progress Sent");
     }
 
     public static void f_AddNewUnit(int idaccount, string idunit, int refactions)
     {
+        if (ShouldBypassNetwork(nameof(f_AddNewUnit))) return;
         SDBUP.StartCoroutine(SDBUP.AddNewUnit(idaccount, idunit, refactions));
         Debug.Log("Request for New Unit Player Sent");
     }
 
     public static void f_BuyNewUnit(int idaccount, string idunit, int refactions, int NewMoney)
     {
+        if (ShouldBypassNetwork(nameof(f_BuyNewUnit))) return;
         SDBUP.StartCoroutine(SDBUP.BuyNewUnit(idaccount, idunit, refactions, NewMoney));
         Debug.Log("Request for Buy Unit Player Sent");
     }
 
     public static void f_AddNewPackUnits(int idaccount, string units_list)
     {
+        if (ShouldBypassNetwork(nameof(f_AddNewPackUnits))) return;
         SDBUP.StartCoroutine(SDBUP.AddNewPackUnits(idaccount, units_list));
         Debug.Log("Request for New Player Units Pack Sent");
     }
 
     public static void f_BuyNewPackUnits(int idaccount, string units_list, int NewMoney)
     {
+        if (ShouldBypassNetwork(nameof(f_BuyNewPackUnits))) return;
         SDBUP.StartCoroutine(SDBUP.BuyNewPackUnits(idaccount, units_list, NewMoney));
         Debug.Log("Request for New Player Units Pack Sent");
     }
 
     public static void f_AddSkins(scr_UnitProgress forunit, string skin)
     {
+        if (ShouldBypassNetwork(nameof(f_AddSkins))) return;
         SDBUP.StartCoroutine(SDBUP.UpdateSkins(forunit, skin));
         Debug.Log("Request for New Skin Unit Sent");
     }
 
     public static void f_BuySkin(scr_UnitProgress forunit, string skin, int NewMoney)
     {
+        if (ShouldBypassNetwork(nameof(f_BuySkin))) return;
         SDBUP.StartCoroutine(SDBUP.BuySkin(forunit, skin, NewMoney));
         Debug.Log("Request for New Skin Unit Sent");
     }
 
     public static void f_AddSkinsPack(scr_UnitProgress[] forunits, string[] skins)
     {
+        if (ShouldBypassNetwork(nameof(f_AddSkinsPack))) return;
         SDBUP.StartCoroutine(SDBUP.UpdateSkinsPack(forunits, skins));
         Debug.Log("Request for New Skin Unit Sent");
     }
 
     public static void f_BuySkinsPack(scr_UnitProgress[] forunits, string[] skins, int NewMoney)
     {
+        if (ShouldBypassNetwork(nameof(f_BuySkinsPack))) return;
         SDBUP.StartCoroutine(SDBUP.BuySkinsPack(forunits, skins, NewMoney));
         Debug.Log("Request for New Skin Unit Sent");
     }
 
     public static void f_UpdatePlayerXp(int idaccount, int Xp)
     {
+        if (ShouldBypassNetwork(nameof(f_UpdatePlayerXp))) return;
         SDBUP.StartCoroutine(SDBUP.UpdatePlayerXp(idaccount, Xp));
         Debug.Log("Request for Player experience Sent");
     }
 
     public static void f_UpdateLastConnection(int idaccount, System.DateTime date)
     {
+        if (ShouldBypassNetwork(nameof(f_UpdateLastConnection))) return;
         SDBUP.StartCoroutine(SDBUP.UpdateLastConnection(idaccount, date));
         Debug.Log("Request for update last connection");
-
     }
 
     public static void f_UpdatePlayerFriends(int iduser)
     {
+        if (ShouldBypassNetwork(nameof(f_UpdatePlayerFriends))) return;
         SDBUP.StartCoroutine(SDBUP.UpdatePlayerFriends(iduser));
         Debug.Log("Request for Player friends Sent");
-
     }
 
     public static void f_SaveMissions(int idaccount)
     {
+        if (ShouldBypassNetwork(nameof(f_SaveMissions))) return;
         SDBUP.StartCoroutine(SDBUP.SaveMissions(idaccount));
         Debug.Log("Request for Missions Save Sent");
     }
 
     public static void f_SetLevelunit(int idaccount, string name_ship, int Level)
     {
+        if (ShouldBypassNetwork(nameof(f_SetLevelunit))) return;
         SDBUP.StartCoroutine(SDBUP.SetLevelunit(idaccount, name_ship, Level));
         Debug.Log("Request for unit experience Sent");
     }
 
     public static void f_SetLevelPlayer(int idaccount, int level)
     {
+        if (ShouldBypassNetwork(nameof(f_SetLevelPlayer))) return;
         SDBUP.StartCoroutine(SDBUP.SetLevelPlayer(idaccount, level));
         Debug.Log("Request for player level Sent");
     }
 
     public static void f_SetLvlXpPlayer(int idaccount, int level, int Xp)
     {
+        if (ShouldBypassNetwork(nameof(f_SetLvlXpPlayer))) return;
         SDBUP.StartCoroutine(SDBUP.SetLvlXpPlayer(idaccount, level, Xp));
         Debug.Log("Request for player xp and lvl Sent");
     }
 
     public static void f_SetRegion(int idaccount, string _Region)
     {
+        if (ShouldBypassNetwork(nameof(f_SetRegion))) return;
         SDBUP.StartCoroutine(SDBUP.SetRegion(idaccount, _Region));
         Debug.Log("Request for player region Sent");
     }
 
     public static void f_SetTitle(int idaccount, int idTitle)
     {
+        if (ShouldBypassNetwork(nameof(f_SetTitle))) return;
         SDBUP.StartCoroutine(SDBUP.SetTitle(idaccount, idTitle));
         Debug.Log("Request for player title Sent");
     }
 
     public static void f_SetAvatar(int idaccount, int avatar)
     {
+        if (ShouldBypassNetwork(nameof(f_SetAvatar))) return;
         if (!IsCHAvatar)
         {
             if (idaccount == scr_StatsPlayer.id)
@@ -218,78 +249,91 @@ public class scr_BDUpdate : MonoBehaviour {
 
     public static void f_SetClan(int idaccount, string Clan)
     {
+        if (ShouldBypassNetwork(nameof(f_SetClan))) return;
         SDBUP.StartCoroutine(SDBUP.SetClan(idaccount, Clan));
         Debug.Log("Request for player clan Sent");
     }
 
     public static void f_UpdateAchievements(int idaccount)
     {
+        if (ShouldBypassNetwork(nameof(f_UpdateAchievements))) return;
         SDBUP.StartCoroutine(SDBUP.UpdateAchievements(idaccount));
         Debug.Log("Request for player Achievements Sent");
     }
 
     public static void f_UpdateMyTitles(int idaccount)
     {
+        if (ShouldBypassNetwork(nameof(f_UpdateMyTitles))) return;
         SDBUP.StartCoroutine(SDBUP.UpdateMyTitles(idaccount));
         Debug.Log("Request for player MyTitles Sent");
     }
 
     public static void f_SetStatsGamesLeague(int idaccount, int victorys, int defeats, int draws)
     {
+        if (ShouldBypassNetwork(nameof(f_SetStatsGamesLeague))) return;
         SDBUP.StartCoroutine(SDBUP.SetStatsGamesLeague(idaccount, victorys, defeats, draws));
         Debug.Log("Request for Stats League");
     }
 
     public static void f_SetStatsGamesIA(int idaccount, int victorys, int defeats, int draws)
     {
+        if (ShouldBypassNetwork(nameof(f_SetStatsGamesIA))) return;
         SDBUP.StartCoroutine(SDBUP.SetStatsGamesIA(idaccount, victorys, defeats, draws));
         Debug.Log("Request for Stats IA Games");
     }
 
     public static void f_SetOrbes(int idaccount)
     {
+        if (ShouldBypassNetwork(nameof(f_SetOrbes))) return;
         SDBUP.StartCoroutine(SDBUP.SetOrbes(idaccount));
         Debug.Log("Request for Orbes Sent");
     }
 
     public static void f_BuyOrbes(int NewMoney)
     {
+        if (ShouldBypassNetwork(nameof(f_BuyOrbes))) return;
         SDBUP.StartCoroutine(SDBUP.BuyOrbes(NewMoney));
         Debug.Log("Request for Orbes Sent");
     }
 
     public static void f_SetStarsOrbs(int idaccount, bool WaitResponse)
     {
+        if (ShouldBypassNetwork(nameof(f_SetStarsOrbs))) return;
         SDBUP.StartCoroutine(SDBUP.SetStarsOrbs(idaccount, WaitResponse));
         Debug.Log("Request for Stars Orbes Sent");
     }
 
     public static void f_SetAllOrbs(int idaccount, bool WaitResponse)
     {
+        if (ShouldBypassNetwork(nameof(f_SetAllOrbs))) return;
         SDBUP.StartCoroutine(SDBUP.SetAllOrbes(idaccount, WaitResponse));
         Debug.Log("Request for All Orbes Sent");
     }
 
     public static void f_SetXpBuff(int idaccount)
     {
+        if (ShouldBypassNetwork(nameof(f_SetXpBuff))) return;
         SDBUP.StartCoroutine(SDBUP.SetXpBuff(idaccount));
         Debug.Log("Request for Xp Buff Sent");
     }
 
     public static void f_BuyXpBuff(int NewMoney)
     {
+        if (ShouldBypassNetwork(nameof(f_BuyXpBuff))) return;
         SDBUP.StartCoroutine(SDBUP.BuyXpBuff(NewMoney));
         Debug.Log("Request for buy Xp Buff Sent");
     }
 
     public static void f_SetNeutrinos(int idaccount, int value)
     {
+        if (ShouldBypassNetwork(nameof(f_SetNeutrinos))) return;
         SDBUP.StartCoroutine(SDBUP.SetNeutrinos(idaccount, value));
         Debug.Log("Request for Neutrinos Sent");
     }
 
     public static void f_SetRange(int idaccount, int Rango, int Lvl, int points)
     {
+        if (ShouldBypassNetwork(nameof(f_SetRange))) return;
         if (idaccount == scr_StatsPlayer.id)
         {
             PhotonNetwork.player.CustomProperties.Remove("Rpoints");
@@ -301,60 +345,70 @@ public class scr_BDUpdate : MonoBehaviour {
 
     public static void f_SetMatch(int id1, int id2, string team1, string team2, int Xp1, int Xp2, int winer, string date)
     {
+        if (ShouldBypassNetwork(nameof(f_SetMatch))) return;
         SDBUP.StartCoroutine(SDBUP.SetMatch(id1, id2, team1, team2, Xp1, Xp2, winer, date));
         Debug.Log("Request for send Match");
     }
 
     public static void f_CheckExistUser(string name)
     {
+        if (ShouldBypassNetwork(nameof(f_CheckExistUser))) return;
         SDBUP.StartCoroutine(SDBUP.CheckExistUser(name));
         Debug.Log("Request for check and add friend Sent");
     }
 
     public static void f_UpdateAllUnitsProgress()
     {
+        if (ShouldBypassNetwork(nameof(f_UpdateAllUnitsProgress))) return;
         SDBUP.StartCoroutine(SDBUP.UpdateAllUnitsProgress());
         Debug.Log("Request for update all units progress send");
     }
 
     public static void f_UpdateListUnitsProgress(List<scr_UnitProgress> _list_units)
     {
+        if (ShouldBypassNetwork(nameof(f_UpdateListUnitsProgress))) return;
         SDBUP.StartCoroutine(SDBUP.UpdateListUnitsProgress(_list_units));
         Debug.Log("Request for update list of units send");
     }
 
     public static void f_AddFriend(string nameuser, string newfriend)
     {
+        if (ShouldBypassNetwork(nameof(f_AddFriend))) return;
         SDBUP.StartCoroutine(SDBUP.AddPlayerFriend(nameuser, newfriend));
         Debug.Log("Request for Add friend Sent");
     }
 
     public static void f_DeleteFriend(string nameuser, string friend)
     {
+        if (ShouldBypassNetwork(nameof(f_DeleteFriend))) return;
         SDBUP.StartCoroutine(SDBUP.DeletePlayerFriend(nameuser, friend));
         Debug.Log("Request for Delete friend Sent");
     }
 
     public static void f_AddFriendR(string nameuser, string newfriend)
     {
+        if (ShouldBypassNetwork(nameof(f_AddFriendR))) return;
         SDBUP.StartCoroutine(SDBUP.AddPlayerFriendR(nameuser, newfriend));
         Debug.Log("Request for Add friend Sent");
     }
 
     public static void f_DeleteFriendR(string nameuser, string newfriend, bool accepted)
     {
+        if (ShouldBypassNetwork(nameof(f_DeleteFriendR))) return;
         SDBUP.StartCoroutine(SDBUP.DeletePlayerFriendR(nameuser, newfriend, accepted));
         Debug.Log("Request for Delete friend Sent");
     }
 
     public static void f_UpdatePlayerFriends()
     {
+        if (ShouldBypassNetwork(nameof(f_UpdatePlayerFriends))) return;
         SDBUP.StartCoroutine(SDBUP.UpdatePlayerFriends(scr_StatsPlayer.iduser));
         Debug.Log("Request for player Range Sent");
     }
 
     public static void f_GetDataFriends(string nameuser)
     {
+        if (ShouldBypassNetwork(nameof(f_GetDataFriends))) return;
         SDBUP.StartCoroutine(SDBUP.GetDataFriends(nameuser));
         //Debug.Log("Request for Add friend Sent");
     }

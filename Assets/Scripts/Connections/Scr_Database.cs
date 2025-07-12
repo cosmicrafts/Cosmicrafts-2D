@@ -764,6 +764,78 @@ public class Scr_Database : Photon.MonoBehaviour
             scr_StatsPlayer.PlayerDeck[0].Add(unit.Name);
             scr_StatsPlayer.PlayerAvUnits[0].Add(unit.Name);
         }
+
+        // --- DEV: Initialize all player stats for UI compatibility ---
+        scr_StatsPlayer.id = 999;
+        scr_StatsPlayer.iduser = 999;
+        scr_StatsPlayer.Name = "DevPlayer";
+        scr_StatsPlayer.Email = "dev@local.com";
+        scr_StatsPlayer.Level = 10;
+        scr_StatsPlayer.Xp = 5000;
+        scr_StatsPlayer.Range = 5;
+        scr_StatsPlayer.LRange = 1;
+        scr_StatsPlayer.RankPoints = 1500;
+        scr_StatsPlayer.Neutrinos = 10000;
+        scr_StatsPlayer.IDAvatar = 0;
+        scr_StatsPlayer.IdCurrentTitle = 0;
+        scr_StatsPlayer.IdClan = -1;
+        scr_StatsPlayer.Region = "DEV";
+        scr_StatsPlayer.WinsStreak = 3;
+        scr_StatsPlayer.Deck = "DevDeck";
+        scr_StatsPlayer.idc = 0;
+        scr_StatsPlayer.VLeague = 10;
+        scr_StatsPlayer.LLeague = 5;
+        scr_StatsPlayer.DLeague = 2;
+        scr_StatsPlayer.VIa = 15;
+        scr_StatsPlayer.LIa = 3;
+        scr_StatsPlayer.DIa = 1;
+        scr_StatsPlayer.XpBuff = 1.0f;
+        scr_StatsPlayer.XpBuffExpire = System.DateTime.Now.AddDays(7);
+        scr_StatsPlayer.LastDateConection = System.DateTime.Now;
+        scr_StatsPlayer.FirstConnection = true;
+        scr_StatsPlayer.FirstBattle = false;
+        scr_StatsPlayer.Afterbattle = false;
+        scr_StatsPlayer.Promotion = false;
+        scr_StatsPlayer.Downgrade = false;
+        scr_StatsPlayer.Tutorial = false;
+        scr_StatsPlayer.Practice = false;
+        scr_StatsPlayer.New_Levels = 0;
+        scr_StatsPlayer.b_LevelUp = false;
+
+        // Initialize Orbes array (required for UpdateCoins())
+        scr_StatsPlayer.Orbes = new int[3] { 5, 3, 2 }; // Give some orbs for testing
+
+        // Initialize OpeningOrbs array
+        scr_StatsPlayer.OpeningOrbs = new scr_DataOrb[1];
+        scr_StatsPlayer.OpeningOrbs[0] = new scr_DataOrb();
+        scr_StatsPlayer.OpeningOrbs[0].Stars = 50;
+        scr_StatsPlayer.OpeningOrbs[0].Type = 3;
+
+        // Initialize MyTitles and MyAchiv arrays
+        scr_StatsPlayer.MyTitles = new bool[11];
+        scr_StatsPlayer.MyAchiv = new List<scr_Achievements>();
+        for (int i = 0; i < 11; i++)
+        {
+            scr_StatsPlayer.MyTitles[i] = false;
+            scr_Achievements NewAchiv = new scr_Achievements();
+            NewAchiv.InitAchiv(i, i, scr_Lang.GetTitleName(i), scr_Lang.GetTitleDescription(i));
+            scr_StatsPlayer.MyAchiv.Add(NewAchiv);
+        }
+        scr_StatsPlayer.MyTitles[0] = true; // Give first title
+
+        // Initialize other required lists
+        if (scr_StatsPlayer.Friends == null) scr_StatsPlayer.Friends = new List<string>();
+        if (scr_StatsPlayer.NewFriends == null) scr_StatsPlayer.NewFriends = new List<string>();
+        if (scr_StatsPlayer.FriendsData == null) scr_StatsPlayer.FriendsData = new List<scr_BDUser>();
+        if (scr_StatsPlayer.MySkins == null) scr_StatsPlayer.MySkins = new List<string>();
+        if (scr_StatsPlayer.HistoryMatchs == null) scr_StatsPlayer.HistoryMatchs = new List<scr_DataMatch>();
+        if (scr_StatsPlayer.UnitsNotAv == null) scr_StatsPlayer.UnitsNotAv = new List<string>();
+
+        // Initialize deck names
+        scr_StatsPlayer.Name_deck[0] = "Dev Deck";
+        scr_StatsPlayer.Name_deck[1] = "Deck 2";
+        scr_StatsPlayer.Name_deck[2] = "Deck 3";
+
         // -------------------------------------------
 
         StateTextLog.text = "DEV LOGIN SUCCESS";

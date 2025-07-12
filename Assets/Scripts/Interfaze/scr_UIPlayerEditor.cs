@@ -144,7 +144,11 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
             chat.Chat.SetActive(false);
         }
 
-        StartCoroutine(DownloadStoreNews());
+        // Only download store news if not in DEV_BYPASS mode
+        if (!Scr_Database.DEV_BYPASS)
+        {
+            StartCoroutine(DownloadStoreNews());
+        }
 
         if (scr_StatsPlayer.Afterbattle)
         {
