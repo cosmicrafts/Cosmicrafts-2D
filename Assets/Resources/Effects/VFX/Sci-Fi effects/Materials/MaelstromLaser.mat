@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MaelstromLaser
+  m_Shader: {fileID: 4800000, guid: d95fd9d0ec2919e4aacf30b1145771e2, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: dc476888661c36c47b90403f0a5fb84d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexture:
+        m_Texture: {fileID: 2800000, guid: 3d0daac4bb3101c4a83c11681e259766, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Particles:
+        m_Texture: {fileID: 2800000, guid: 45ed6fcac5b7c26408217af5240ed2b3, type: 3}
+        m_Scale: {x: 1, y: 0.2}
+        m_Offset: {x: 0, y: 0}
+    - _Partiles:
+        m_Texture: {fileID: 2800000, guid: 440e37fa3ac004c4f91bdbe895f051af, type: 3}
+        m_Scale: {x: 2, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _WindTexture:
+        m_Texture: {fileID: 2800000, guid: 6cb1035c098310d4d8e93132225bb981, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _dfhgd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_1283:
+        m_Texture: {fileID: 2800000, guid: 3d0daac4bb3101c4a83c11681e259766, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_139:
+        m_Texture: {fileID: 2800000, guid: 3d0daac4bb3101c4a83c11681e259766, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_306:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_8359:
+        m_Texture: {fileID: 2800000, guid: dc476888661c36c47b90403f0a5fb84d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Beampower: 1
+    - _Centerpower: 5
+    - _Cutoff: 0.5
+    - _Emission: 1
+    - _Mainbeampower: 15
+    - _Opacity: 2
+    - _Particlespower: 2
+    - _Uspeed: 1
+    - _Uspeed_copy: 0.5
+    - _Uspeed_copy_copy: 4
+    - _Uspeed_copy_copy_copy: 2
+    - _Vspeed: 0
+    - _Vspeed_copy: 0
+    - _Vspeed_copy_copy: 0
+    - _Vspeed_copy_copy_copy: 0
+    - _power: 6
+    m_Colors:
+    - _Color: {r: 0.27205884, g: 0.81926966, b: 1, a: 1}
+    - _MainColor: {r: 1, g: 0, b: 0, a: 1}
+    - _Particlescolor: {r: 0, g: 0.42068958, b: 1, a: 1}
+    - _Speed: {r: -2, g: 0, b: 0.5, a: 0}
+    - _TintColor: {r: 1, g: 0.51724136, b: 0, a: 1}
+    - _WindColor: {r: 1, g: 1, b: 1, a: 1}
+    - _node_1584: {r: 0, g: 0.462069, b: 1, a: 1}

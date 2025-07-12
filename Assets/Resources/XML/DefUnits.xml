@@ -1,0 +1,3048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Units>
+  <Unit IdName="DefaultUnit" Type="Ship">
+    <Id>1</Id>
+    <Name>NoName</Name>
+    <Icon>I_Ship_01</Icon>
+    <Sprite>SP_Ush_01</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Skin</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Skin</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>1</MaxLevel>
+    <Description lan="English">Sin Descripcion</Description>
+    <Description lan="Spanish">No Description</Description>
+    <Physics>false</Physics>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>1</Cost>
+    <Hp>100</Hp>
+    <Armor>0</Armor>
+    <RangeView>1</RangeView>
+    <Power>0</Power>
+    <Boost>0</Boost>
+    <Duration>0</Duration>
+    <EffDuration>0</EffDuration>
+    <RangeAtk>1</RangeAtk>
+    <Speed>0</Speed>
+    <Attack>0</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.1</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>0</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>5</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+    <SyncAnimAngle>false</SyncAnimAngle>
+    <Ships></Ships>
+    <Positioning>mouth</Positioning>
+    <Banck>0</Banck>
+    <Energize>0</Energize>
+    <HpRegen>0</HpRegen>
+    <AttackRadio>0</AttackRadio>
+    <Critical>0</Critical>
+    <Vampiric>0</Vampiric>
+    <BerserkMaxDMG>0</BerserkMaxDMG>
+    <Overheating>0</Overheating>
+    <ChargeDMG>0</ChargeDMG>
+    <DirectShoot>false</DirectShoot>
+    <DirectShootRadio>0</DirectShootRadio>
+    <SpawnUnit>none</SpawnUnit>
+    <SpawnUnitTime>0</SpawnUnitTime>
+    <AfterShockDMG>0</AfterShockDMG>
+    <AfterShockRange>0</AfterShockRange>    
+  </Unit>
+
+  <Unit IdName="U_Ship_test" Type="Ship">
+    <Id>1</Id>
+    <Name>TestShip</Name>
+    <Icon>I_Ship_01</Icon>
+    <Sprite>SP_Ush_01</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Viper</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Viper</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>3</Cost>
+    <Hp>1000</Hp>
+    <RangeView>6</RangeView>
+    <RangeAtk>3</RangeAtk>
+    <Speed>3</Speed>
+    <Attack>24</Attack>
+    <SpeedAttack>1.5</SpeedAttack>
+    <SyncAnimAngle>true</SyncAnimAngle>
+    <AttackRadio>1</AttackRadio>
+    <AfterShockDMG>100</AfterShockDMG>
+    <AfterShockRange>3</AfterShockRange>
+  </Unit>
+
+  <Unit IdName="U_Target_Practice" Type="Station" >
+    <Id>1</Id>
+    <Name>Test Unit</Name>
+    <Icon>I_Sta_01</Icon>
+    <Sprite>Sp_Ubl_01</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Hydrogen energy reactor</Description>
+    <Description lan="Spanish">Reactor de energía de hidrógeno </Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>0</Cost>
+    <Hp>999999</Hp>
+    <CastDelay>0</CastDelay>
+    <HpRegen>999</HpRegen>
+  </Unit>
+
+  <Unit IdName="Station_Central_Command" Type="Station" >
+    <Id>0</Id>
+    <Name>Central Command</Name>
+    <Sprite>SP_Ubl_23</Sprite>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Size>.75</Size>
+    <Hp>2500</Hp>
+    <Armor>4</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>8</RangeAtk>
+    <Attack>80</Attack>
+    <AttackRadio>.25</AttackRadio>
+    <SpeedAttack>2</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <BulletType>4</BulletType>
+    <BulletSpeed>22</BulletSpeed>
+    <Energize>.5</Energize>
+    <Physics>true</Physics>
+  </Unit>
+
+  <Unit IdName="Station_Inhibitor" Type="Station" >
+    <Id>-1</Id>
+    <Name>Inhibitor</Name>
+    <Sprite>SP_Ubl_22</Sprite>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Size>.5</Size>
+    <Hp>2000</Hp>
+    <Armor>4</Armor>
+    <SpawnArea>4</SpawnArea>
+    <SpawnUnit>U_Ship_15</SpawnUnit>
+    <SpawnUnitTime>20</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="Station_Satelite" Type="Station" >
+    <Id>-2</Id>
+    <Name>Satelite</Name>
+    <Sprite>SP_Ubl_21</Sprite>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Size>.1</Size>
+    <Hp>400</Hp>
+    <Armor>1</Armor>
+    <SpawnArea>4</SpawnArea>
+    <Energize>.25</Energize>
+  </Unit>
+
+  <Unit IdName="U_Ship_01" Type="Ship" >
+    <Id>1</Id>
+    <Name>Viper</Name>
+    <Icon>I_Ship_01</Icon>
+    <Sprite>SP_Ush_01</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Viper</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Viper</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>2</Cost>
+    <Hp>225</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>2</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.5</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>0.35</BulletSize>
+    <BulletType>3</BulletType>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_02" Type="Ship" >
+    <Id>2</Id>
+    <Name>Vanguard</Name>
+    <Icon>I_Ship_02</Icon>
+    <Sprite>SP_Ush_02</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="50" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>2</Cost>
+    <Hp>240</Hp>
+    <Armor>4</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>1.5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0.5</Speed>
+    <Attack>16</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>10</BulletSpeed>
+    <BulletSize>0.65</BulletSize>
+    <BulletType>0</BulletType>
+    <HpRegen>12</HpRegen>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_03" Type="Ship" >
+    <Id>3</Id>
+    <Name>Avenger</Name>
+    <Icon>I_Ship_03</Icon>
+    <Sprite>SP_Ush_03</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Hp>225</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>2.1</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.5</Speed>
+    <Attack>30</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.5</BulletSize>
+    <BulletType>4</BulletType>
+    <BerserkMaxDMG>42</BerserkMaxDMG>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_04" Type="Ship" >
+    <Id>4</Id>
+    <Name>Devastator</Name>
+    <Icon>I_Ship_04</Icon>
+    <Sprite>SP_Ush_04</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      <Skin IdSkin="Blue" Hue="50" Rarity="0">Blue Dreams</Skin>
+      <Skin IdSkin="Green" Hue="120" Rarity="0">Wild Jungle</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>3</Rarity>
+    <Cost>4</Cost>
+    <Hp>440</Hp>
+    <Armor>4</Armor>
+    <RangeView>2.5</RangeView>
+    <RangeAtk>2.5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0.95</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>0.25</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.4</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>4</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>0.5</BulletSize>
+    <BulletType>2</BulletType>
+    <Critical>0.25</Critical>
+    <Vampiric>0.25</Vampiric>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_05" Type="Ship" >
+    <Id>5</Id>
+    <Name>Phaser</Name>
+    <Icon>I_Ship_05</Icon>
+    <Sprite>SP_Ush_05</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Hp>225</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>4</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.45</Speed>
+    <Attack>48</Attack>
+    <SpeedAttack>2.5</SpeedAttack>
+    <CastDelay>0.25</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>10</BulletSpeed>
+    <BulletSize>.75</BulletSize>
+    <BulletType>2</BulletType>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_06" Type="Ship" >
+    <Id>6</Id>
+    <Name>Rex</Name>
+    <Icon>I_Ship_06</Icon>
+    <Sprite>SP_Ush_06</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>4</Cost>
+    <Hp>420</Hp>
+    <Armor>8</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>.1</RangeAtk>
+    <AttackRadio>.2</AttackRadio>
+    <Speed>2</Speed>
+    <Attack>20</Attack>
+    <SpeedAttack>.25</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>6</BulletType>
+    <Vampiric>0.5</Vampiric>
+    <ChargeDMG>20</ChargeDMG>
+    <BerserkMaxDMG>20</BerserkMaxDMG>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_07" Type="Ship" >
+    <Id>7</Id>
+    <Name>Raptor</Name>
+    <Icon>I_Ship_07</Icon>
+    <Sprite>SP_Ush_07</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>1</Cost>
+    <Hp>400</Hp>
+    <Armor>3</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>.1</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>2.25</Speed>
+    <Attack>10</Attack>
+    <SpeedAttack>.1</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>0</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>6</BulletType>
+    <Vampiric>1</Vampiric>
+    <ChargeDMG>10</ChargeDMG>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_08" Type="Ship" >
+    <Id>8</Id>
+    <Name>Buttress</Name>
+    <Icon>I_Ship_08</Icon>
+    <Sprite>SP_Ush_08</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>7</Cost>
+    <Hp>1000</Hp>
+    <Armor>8</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>1</RangeAtk>
+    <AttackRadio>0.5</AttackRadio>
+    <Speed>1</Speed>
+    <Attack>160</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <CastDelay>1</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>2</BulletType>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_09" Type="Ship" >
+    <Id>9</Id>
+    <Name>Predator</Name>
+    <Icon>I_Ship_09</Icon>
+    <Sprite>SP_Ush_09</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>.65</Size>
+    <Rarity>3</Rarity>
+    <Cost>5</Cost>
+    <Hp>550</Hp>
+    <Armor>5</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>2</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.5</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>0.5</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>0.64</BulletSize>
+    <BulletType>0</BulletType>
+    <Critical>0.25</Critical>
+    <Vampiric>0.25</Vampiric>
+    <Physics>true</Physics>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_10" Type="Ship" >
+    <Id>10</Id>
+    <Name>Dominator</Name>
+    <Icon>I_Ship_10</Icon>
+    <Sprite>SP_Ush_10</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Hp>225</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>4</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.45</Speed>
+    <Attack>8</Attack>
+    <SpeedAttack>0.2</SpeedAttack>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>0.25</BulletSize>
+    <BulletType>1</BulletType>
+    <Critical>0.25</Critical>
+    <Vampiric>0</Vampiric>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+  <Unit IdName="U_Ship_11" Type="Ship" >
+    <Id>11</Id>
+    <Name>Starsparrow</Name>
+    <Icon>I_Ship_11</Icon>
+    <Sprite>SP_Ush_11</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Hp>225</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>3</RangeAtk>
+    <AttackRadio>1</AttackRadio>
+    <Speed>1.5</Speed>
+    <Attack>120</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>3</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>8</BulletSpeed>
+    <BulletSize>.45</BulletSize>
+    <BulletType>4</BulletType>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_12" Type="Ship" >
+    <Id>12</Id>
+    <Name>Barracuda</Name>
+    <Icon>I_Ship_12</Icon>
+    <Sprite>SP_Ush_12</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>3</Rarity>
+    <Cost>5</Cost>
+    <Hp>800</Hp>
+    <Armor>2</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>6</RangeAtk>
+    <AttackRadio>1</AttackRadio>
+    <Speed>1.1</Speed>
+    <Attack>120</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>1</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <HpRegen>24</HpRegen>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>4</BulletType>
+    <Physics>true</Physics>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_13" Type="Ship" >
+    <Id>13</Id>
+    <Name>Supercuda</Name>
+    <Icon>I_Ship_13</Icon>
+    <Sprite>SP_Ush_13</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>3</Rarity>
+    <Cost>9</Cost>
+    <Hp>1250</Hp>
+    <Armor>8</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>.1</RangeAtk>
+    <AttackRadio>1.5</AttackRadio>
+    <Speed>1.5</Speed>
+    <Attack>50</Attack>
+    <SpeedAttack>0.25</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>8</BulletSpeed>
+    <BulletSize>0.25</BulletSize>
+    <BulletType>5</BulletType>
+    <ChargeDMG>20</ChargeDMG>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_14" Type="Ship" >
+    <Id>14</Id>
+    <Name>Mosquito</Name>
+    <Icon>I_Ship_14</Icon>
+    <Sprite>SP_Ush_14</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> Deciever of the shadows, hard to get a hit</Description>
+    <Description lan="Spanish"> Su sombra te puede engañar, es dificil que reciba un disparo</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>1</Cost>
+    <Hp>75</Hp>
+    <Armor>1</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>2.5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.75</Speed>
+    <Attack>24</Attack>
+    <SpeedAttack>0.5</SpeedAttack>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>0.35</BulletSize>
+    <BulletType>1</BulletType>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_15" Type="Ship" >
+    <Id>15</Id>
+    <Name>Slider</Name>
+    <Icon>I_Ship_15</Icon>
+    <Sprite>SP_Ush_15</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>0</Cost>
+    <Hp>65</Hp>
+    <Armor>0</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>1.5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>0</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>0.35</BulletSize>
+    <BulletType>0</BulletType>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_16" Type="Ship" >
+    <Id>16</Id>
+    <Name>Beluga</Name>
+    <Icon>I_Ship_16</Icon>
+    <Sprite>SP_Ush_16</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>3</Cost>
+    <Hp>280</Hp>
+    <Armor>2</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>4</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>.85</Speed>
+    <Attack>16</Attack>
+    <SpeedAttack>0.5</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>0.5</BulletSize>
+    <BulletType>0</BulletType>
+    <SpawnArea>4</SpawnArea>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_17" Type="Ship" >
+    <Id>17</Id>
+    <Name>Harbinger</Name>
+    <Icon>I_Ship_17</Icon>
+    <Sprite>SP_Ush_17</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>0.75</Size>
+    <Rarity>1</Rarity>
+    <Cost>1</Cost>
+    <Hp>65</Hp>
+    <Armor>0</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>.1</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>10</Speed>
+    <Attack>2</Attack>
+    <SpeedAttack>.1</SpeedAttack>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>1</Ncannons>
+    <BulletSpeed>8</BulletSpeed>
+    <BulletSize>.1</BulletSize>
+    <AfterShockDMG>65</AfterShockDMG>
+    <AfterShockRange>3</AfterShockRange>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_18" Type="Ship" >
+    <Id>18</Id>
+    <Name>Zenith</Name>
+    <Icon>I_Ship_18</Icon>
+    <Sprite>SP_Ush_18</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>4</Cost>
+    <Hp>250</Hp>
+    <Armor>0</Armor>
+    <RangeView>8</RangeView>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0.5</Speed>
+    <SpawnArea>8</SpawnArea>
+    <CastDelay>1</CastDelay>
+    <Poblation>1</Poblation>
+    <Banck>1</Banck>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_19" Type="Ship" >
+    <Id>19</Id>
+    <Name>Griff</Name>
+    <Icon>I_Ship_19</Icon>
+    <Sprite>SP_Ush_19</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Hp>90</Hp>
+    <Armor>1</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>1.75</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.25</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>.25</BulletSize>
+    <BulletType>0</BulletType>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_20" Type="Ship" >
+    <Id>20</Id>
+    <Name>Foxhound</Name>
+    <Icon>I_Ship_20</Icon>
+    <Sprite>SP_Ush_20</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>7</Cost>
+    <Hp>240</Hp>
+    <Armor>2</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>2</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>1.5</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>0.75</BulletSize>
+    <BulletType>0</BulletType>
+    <Physics>true</Physics>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+  
+  <Unit IdName="U_Ship_21" Type="Ship" >
+    <Id>21</Id>
+    <Name>Stalker</Name>
+    <Icon>I_Ship_21</Icon>
+    <Sprite>SP_Ush_21</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>5</Cost>
+    <Hp>390</Hp>
+    <Armor>3</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.1</Speed>
+    <Attack>16</Attack>
+    <SpeedAttack>.35</SpeedAttack>
+    <CastDelay>0.35</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.35</BulletSize>
+    <BulletType>0</BulletType>
+    <Critical>.35</Critical>
+    <Vampiric>.35</Vampiric>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+    
+  <Unit IdName="U_Ship_22" Type="Ship" >
+    <Id>22</Id>
+    <Name>Akashi</Name>
+    <Icon>I_Ship_22</Icon>
+    <Sprite>SP_Ush_22</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>2</Cost>
+    <Hp>160</Hp>
+    <Armor>1</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>1</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.5</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <SpawnArea>6</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>8</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+    <HpRegen>50</HpRegen>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_23" Type="Ship" >
+    <Id>23</Id>
+    <Name>Razor</Name>
+    <Icon>I_Ship_23</Icon>
+    <Sprite>SP_Ush_23</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>2</Cost>
+    <Hp>200</Hp>
+    <Armor>2</Armor>
+    <RangeView>.1</RangeView>
+    <RangeAtk>.1</RangeAtk>
+    <AttackRadio>.25</AttackRadio>
+    <Speed>10</Speed>
+    <Attack>25</Attack>
+    <SpeedAttack>.25</SpeedAttack>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>10</BulletSpeed>
+    <BulletSize>.1</BulletSize>
+    <BulletType>6</BulletType>
+    <Physics>true</Physics>
+    <AfterShockDMG>80</AfterShockDMG>
+    <AfterShockRange>2.5</AfterShockRange>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_24" Type="Ship" >
+    <Id>24</Id>
+    <Name>FF1</Name>
+    <Icon>I_Ship_24</Icon>
+    <Sprite>SP_Ush_24</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>3</Cost>
+    <Hp>260</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>3.5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>3</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>.5</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.25</BulletSize>
+    <BulletType>3</BulletType>
+    <HpRegen>10</HpRegen>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Ship_25" Type="Ship" >
+    <Id>25</Id>
+    <Name>Stingray</Name>
+    <Icon>I_Ship_25</Icon>
+    <Sprite>SP_Ush_25</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>4</Cost>
+    <Hp>420</Hp>
+    <Armor>4</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>5.5</RangeAtk>
+    <Speed>1</Speed>
+    <Attack>60</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>0.4</BulletSize>
+    <BulletType>4</BulletType>
+    <SyncAnimAngle>true</SyncAnimAngle>
+    <AttackRadio>0.25</AttackRadio>
+  </Unit>
+
+    <Unit IdName="U_Ship_26" Type="Ship" >
+    <Id>26</Id>
+    <Name>Roach</Name>
+    <Icon>I_Ship_26</Icon>
+    <Sprite>SP_Ush_26</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>3</Rarity>
+    <Cost>4</Cost>
+    <Hp>890</Hp>
+    <Armor>6</Armor>
+    <RangeView>3</RangeView>
+    <RangeAtk>2</RangeAtk>
+    <AttackRadio>.25</AttackRadio>
+    <Speed>1.25</Speed>
+    <Attack>60</Attack>
+    <SpeedAttack>|</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>.5</BulletSize>
+    <BulletType>1</BulletType>
+    <Critical>0.5</Critical>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_27" Type="Ship" >
+    <Id>27</Id>
+    <Name>Whew</Name>
+    <Icon>I_Ship_27</Icon>
+    <Sprite>SP_Ush_27</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Hp>160</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>4.5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.2</Speed>
+    <Attack>8</Attack>
+    <SpeedAttack>.5</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>.5</BulletSize>
+    <BulletType>0</BulletType>
+    <Critical>.25</Critical>
+    <Physics>true</Physics>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_28" Type="Ship" >
+    <Id>28</Id>
+    <Name>Blade</Name>
+    <Icon>I_Ship_28</Icon>
+    <Sprite>SP_Ush_28</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>.85</Size>
+    <Rarity>1</Rarity>
+    <Cost>7</Cost>
+    <Hp>700</Hp>
+    <Armor>7</Armor>
+    <RangeView>7</RangeView>
+    <RangeAtk>0.1</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>2</Speed>
+    <Attack>10</Attack>
+    <SpeedAttack>.1</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>10</BulletSpeed>
+    <BulletSize>.1</BulletSize>
+    <BulletType>6</BulletType>
+    <Critical>.7</Critical>
+    <Vampiric>.7</Vampiric>
+    <ChargeDMG>10</ChargeDMG>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_29" Type="Ship" >
+    <Id>29</Id>
+    <Name>Supermachine</Name>
+    <Icon>I_Ship_29</Icon>
+    <Sprite>SP_Ush_29</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Hp>260</Hp>
+    <Armor>6</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>2.25</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.2</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>.25</BulletSize>
+    <BulletType>2</BulletType>
+    <BerserkMaxDMG>12</BerserkMaxDMG>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_30" Type="Ship" >
+    <Id>30</Id>
+    <Name>Akasha</Name>
+    <Icon>I_Ship_30</Icon>
+    <Sprite>SP_Ush_30</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>3</Cost>
+    <Hp>320</Hp>
+    <Armor>3</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>2</Speed>
+    <Attack>9</Attack>
+    <SpeedAttack>.25</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>19</BulletSpeed>
+    <BulletSize>.9</BulletSize>
+    <BulletType>0</BulletType>
+    <Vampiric>1</Vampiric>
+    <BerserkMaxDMG>9</BerserkMaxDMG>
+    <Physics>true</Physics>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_31" Type="Ship" >
+    <Id>31</Id>
+    <Name>Humper</Name>
+    <Icon>I_Ship_31</Icon>
+    <Sprite>SP_Ush_31</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>4</Cost>
+    <Hp>360</Hp>
+    <Armor>8</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>1.5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.8</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>9</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+    <Banck>1</Banck>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_32" Type="Ship" >
+    <Id>32</Id>
+    <Name>Raider</Name>
+    <Icon>I_Ship_32</Icon>
+    <Sprite>SP_Ush_32</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+        <Skin IdSkin="Blue" Hue="50" Rarity="0">Blue Dreams</Skin>
+        <Skin IdSkin="Green" Hue="120" Rarity="0">Wild Jungle</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>3</Cost>
+    <Hp>280</Hp>
+    <Armor>6</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>2.5</RangeAtk>
+    <AttackRadio>1</AttackRadio>
+    <Speed>1.1</Speed>
+    <Attack>32</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.32</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>4</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.3</BulletSize>
+    <BulletType>3</BulletType>
+    <AfterShockDMG>32</AfterShockDMG>
+    <AfterShockRange>3.2</AfterShockRange>
+    <Critical>0.32</Critical>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_33" Type="Ship" >
+    <Id>33</Id>
+    <Name>Ragnarok</Name>
+    <Icon>I_Ship_33</Icon>
+    <Sprite>SP_Ush_33</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>3</Cost>
+    <Hp>295</Hp>
+    <Armor>4</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>4.45</RangeAtk>
+    <AttackRadio>.5</AttackRadio>
+    <Speed>1.1</Speed>
+    <Attack>80</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <CastDelay>0.45</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>    
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>1.5</BulletSize>
+    <BulletType>4</BulletType>
+    <Physics>true</Physics>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_34" Type="Ship" >
+    <Id>34</Id>
+    <Name>Beacon</Name>
+    <Icon>I_Ship_34</Icon>
+    <Sprite>SP_Ush_34</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>8</Cost>
+    <Hp>1200</Hp>
+    <Armor>12</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>.25</RangeAtk>
+    <AttackRadio>1</AttackRadio>
+    <Speed>2</Speed>
+    <Attack>280</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <CastDelay>0.75</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>6</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>.15</BulletSize>
+    <BulletType>7</BulletType>
+    <AfterShockDMG>400</AfterShockDMG>
+    <AfterShockRange>4</AfterShockRange>
+    <Physics>true</Physics>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_35" Type="Ship" >
+    <Id>35</Id>
+    <Name>Raven</Name>
+    <Icon>I_Ship_35</Icon>
+    <Sprite>SP_Ush_35</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>3</Cost>
+    <Hp>240</Hp>
+    <Armor>2</Armor>
+    <RangeView>5</RangeView>
+    <RangeAtk>5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>2</Speed>
+    <Attack>8</Attack>
+    <SpeedAttack>.25</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>.25</BulletSize>
+    <BulletType>0</BulletType>
+    <Physics>true</Physics>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_36" Type="Ship" >
+    <Id>36</Id>
+    <Name>Hoover</Name>
+    <Icon>I_Ship_36</Icon>
+    <Sprite>SP_Ush_36</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>1</Cost>
+    <Hp>180</Hp>
+    <Armor>1</Armor>
+    <RangeView>5</RangeView>
+    <RangeAtk>4.5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.2</Speed>
+    <Attack>24</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>8</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+    <Physics>true</Physics>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+ 
+    <Unit IdName="U_Ship_37" Type="Ship" >
+    <Id>37</Id>
+    <Name>Odin</Name>
+    <Icon>I_Ship_37</Icon>
+    <Sprite>SP_Ush_37</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1.1</Size>
+    <Rarity>1</Rarity>
+    <Cost>9</Cost>
+    <Hp>560</Hp>
+    <Armor>5</Armor>
+    <RangeView>5</RangeView>
+    <RangeAtk>4.25</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0.45</Speed>
+    <Attack>10</Attack>
+    <SpeedAttack>.25</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>.5</BulletSize>
+    <BulletType>1</BulletType>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_38" Type="Ship" >
+    <Id>38</Id>
+    <Name>Warhawk</Name>
+    <Icon>I_Ship_38</Icon>
+    <Sprite>SP_Ush_38</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>.75</Size>
+    <Rarity>3</Rarity>
+    <Cost>7</Cost>
+    <Hp>750</Hp>
+    <Armor>8</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>.1</RangeAtk>
+    <AttackRadio>.7</AttackRadio>
+    <Speed>2</Speed>
+    <Attack>70</Attack>
+    <SpeedAttack>.7</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.1</BulletSize>
+    <BulletType>0</BulletType>
+    <AfterShockDMG>70</AfterShockDMG>
+    <AfterShockRange>.7</AfterShockRange>
+    <BerserkMaxDMG>70</BerserkMaxDMG>
+    <ChargeDMG>70</ChargeDMG>
+    <Vampiric>.7</Vampiric>
+    <Physics>true</Physics>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_39" Type="Ship" >
+    <Id>39</Id>
+    <Name>Havoc</Name>
+    <Icon>I_Ship_39</Icon>
+    <Sprite>SP_Ush_39</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>.75</Size>
+    <Rarity>1</Rarity>
+    <Cost>8</Cost>
+    <Hp>560</Hp>
+    <Armor>8</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>8</RangeAtk>
+    <AttackRadio>1</AttackRadio>
+    <Speed>1.1</Speed>
+    <Attack>80</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>2</BulletSize>
+    <BulletType>0</BulletType>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_40" Type="Ship" >
+    <Id>40</Id>
+    <Name>Xerox</Name>
+    <Icon>I_Ship_40</Icon>
+    <Sprite>SP_Ush_40</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Hp>280</Hp>
+    <Armor>4</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>6</RangeAtk>
+    <AttackRadio>.4</AttackRadio>
+    <Speed>1.1</Speed>
+    <Attack>24</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.5</BulletSize>
+    <BulletType>3</BulletType>
+    <SpawnArea>4</SpawnArea>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_41" Type="Ship" >
+    <Id>41</Id>
+    <Name>Abdicator</Name>
+    <Icon>I_Ship_41</Icon>
+    <Sprite>SP_Ush_41</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>4</Cost>
+    <Hp>320</Hp>
+    <Armor>3</Armor>
+    <RangeView>5</RangeView>
+    <RangeAtk>5</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>1.1</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>4</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>18</BulletSpeed>
+    <BulletSize>.25</BulletSize>
+    <BulletType>0</BulletType>
+    <Critical>.25</Critical>
+    <BerserkMaxDMG>12</BerserkMaxDMG>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+    <Unit IdName="U_Ship_42" Type="Ship" >
+    <Id>42</Id>
+    <Name>Disruptor</Name>
+    <Icon>I_Ship_42</Icon>
+    <Sprite>SP_Ush_42</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>4</Cost>
+    <Hp>360</Hp>
+    <Armor>3</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>6</RangeAtk>
+    <AttackRadio>.5</AttackRadio>
+    <Speed>1.1</Speed>
+    <Attack>80</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>20</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>4</BulletType>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_43" Type="Ship" >
+    <Id>43</Id>
+    <Name>Pecker</Name>
+    <Icon>I_Ship_43</Icon>
+    <Sprite>SP_Ush_43</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>3</Cost>
+    <Hp>150</Hp>
+    <Armor>2</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>3</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0.65</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>4</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>8</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_44" Type="Ship" >
+    <Id>44</Id>
+    <Name>Catalyst</Name>
+    <Icon>I_Ship_44</Icon>
+    <Sprite>SP_Ush_44</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>4</Cost>
+    <Hp>200</Hp>
+    <Armor>2</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>2.2</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0.75</Speed>
+    <Attack>24</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>8</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+    <HpRegen>0</HpRegen>
+    <AfterShockDMG>0</AfterShockDMG>
+    <AfterShockRange>2</AfterShockRange>
+    <Critical>0</Critical>
+    <Vampiric>0</Vampiric>
+    <Banck>0</Banck>
+    <BerserkMaxDMG>24</BerserkMaxDMG>
+    <Energize>0</Energize>
+    <ChargeDMG>0</ChargeDMG>
+    <SpawnUnit>none</SpawnUnit>
+    <SpawnUnitTime>0</SpawnUnitTime>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_45" Type="Ship" >
+    <Id>45</Id>
+    <Name>Drill</Name>
+    <Icon>I_Ship_45</Icon>
+    <Sprite>SP_Ush_45</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>      
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>6</Cost>
+    <Hp>460</Hp>
+    <Armor>6</Armor>
+    <RangeView>7</RangeView>
+    <RangeAtk>7</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0.45</Speed>
+    <Attack>4</Attack>
+    <SpeedAttack>.25</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <BulletSpeed>12</BulletSpeed>
+    <BulletSize>.5</BulletSize>
+    <BulletType>2</BulletType>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_46" Type="Ship" >
+    <Id>46</Id>
+    <Name>Warhawk</Name>
+    <Icon>I_Ship_46</Icon>
+    <Sprite>SP_Ush_46</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>3</Rarity>
+    <Cost>9</Cost>
+    <Hp>950</Hp>
+    <Armor>9</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>.01</RangeAtk>
+    <AttackRadio>.25</AttackRadio>
+    <Speed>0.75</Speed>
+    <Attack>20</Attack>
+    <SpeedAttack>0.25</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.85</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>1</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>3</BulletType>
+    <Vampiric>.5</Vampiric>
+    <ChargeDMG>20</ChargeDMG>
+    <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+
+    <Unit IdName="U_Ship_47" Type="Ship" >
+    <Id>47</Id>
+    <Name>Monarch</Name>
+    <Icon>I_Ship_47</Icon>
+    <Sprite>SP_Ush_47</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Ship</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>6</Cost>
+    <Hp>500</Hp>
+    <Armor>6</Armor>
+    <RangeView>7</RangeView>
+    <RangeAtk>7</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0.45</Speed>
+    <Attack>24</Attack>
+    <SpeedAttack>2</SpeedAttack>
+    <SpawnArea>0</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Duration>0</Duration>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>8</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>1</BulletType>
+      <SyncAnimAngle>true</SyncAnimAngle>
+  </Unit>
+
+  <Unit IdName="U_Station_01" Type="Station" >
+    <Id>1</Id>
+    <Name>Reactor</Name>
+    <Icon>I_Sta_01</Icon>
+    <Sprite>Sp_Ubl_01</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>	
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Hydrogen energy reactor</Description>
+    <Description lan="Spanish">Reactor de energía de hidrógeno </Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>5</Cost>
+    <Hp>360</Hp>
+    <Armor>3</Armor>
+    <RangeView>10</RangeView>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Energize>.25</Energize>
+  </Unit>
+
+  <Unit IdName="U_Station_02" Type="Station" >
+    <Id>2</Id>
+    <Name>Monolith</Name>
+    <Icon>I_Sta_02</Icon>
+    <Sprite>Sp_Ubl_02</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Ancient radioactive and gravitational station</Description>
+    <Description lan="Spanish">Antigua estación radioactiva y gravitacional</Description>
+    <Size>1</Size>
+    <Rarity>3</Rarity>
+    <Cost>6</Cost>
+    <Hp>1400</Hp>
+    <Armor>16</Armor>
+    <RangeView>10</RangeView>
+    <RangeAtk>6</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0</Speed>
+    <Attack>0</Attack>
+    <SpeedAttack>0</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>1</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>0</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <Banck>2</Banck>
+    <Energize>.1</Energize>
+    <HpRegen>12</HpRegen>
+    <FreezeDuration>0</FreezeDuration>
+    <AfterShockDMG>400</AfterShockDMG>
+    <AfterShockRange>2</AfterShockRange>
+  </Unit>
+
+  <Unit IdName="U_Station_03" Type="Station" >
+    <Id>3</Id>
+    <Name>War Council</Name>
+    <Icon>I_Sta_03</Icon>
+    <Sprite>Sp_Ubl_03</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>6</Cost>
+    <Hp>1000</Hp>
+    <Armor>4</Armor>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <IsInmune>false</IsInmune>
+    <SyncAnimAngle>true</SyncAnimAngle>
+    <SpawnUnit>U_Ship_19</SpawnUnit>
+    <SpawnUnitTime>15</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Station_04" Type="Station" >
+    <Id>4</Id>
+    <Name>Pylon</Name>
+    <Icon>I_Sta_04</Icon>
+    <Sprite>Sp_Ubl_04</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>2</Cost>
+    <Hp>200</Hp>
+    <Armor>2</Armor>
+    <RangeView>2</RangeView>
+    <RangeAtk>0</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Speed>0</Speed>
+    <Attack>0</Attack>
+    <SpeedAttack>0</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.25</CastDelay>
+    <Ncannons>0</Ncannons>
+    <Poblation>0</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>0</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+    <Energize>.1</Energize>
+  </Unit>
+
+  <Unit IdName="U_Station_05" Type="Station" >
+    <Id>5</Id>
+    <Name>Space Jumper</Name>
+    <Icon>I_Sta_05</Icon>
+    <Sprite>Sp_Ubl_05</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>6</Cost>
+    <Hp>550</Hp>
+    <Armor>5</Armor>
+    <RangeView>0</RangeView>
+    <RangeAtk>0</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <DirectShoot>false</DirectShoot>
+    <DirectShootRadio>0</DirectShootRadio>
+    <Speed>0</Speed>
+    <Attack>0</Attack>
+    <SpeedAttack>0</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>0</Ncannons>
+    <Poblation>0</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>0</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+    <SpawnUnit>U_Squad_09</SpawnUnit>
+    <SpawnUnitTime>10</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Station_06" Type="Station" >
+    <Id>6</Id>
+    <Name>Pulverizer</Name>
+    <Icon>I_Sta_06</Icon>
+    <Sprite>Sp_Ubl_06</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>2</Rarity>
+    <Cost>4</Cost>
+    <Hp>400</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>4</RangeAtk>
+    <AttackRadio>.25</AttackRadio>
+    <Attack>12</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>2</Ncannons>
+    <Poblation>1</Poblation>
+    <SyncAnimAngle>true</SyncAnimAngle>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.5</BulletSize>
+    <BulletType>1</BulletType>
+  </Unit>
+
+  <Unit IdName="U_Station_07" Type="Station" >
+    <Id>7</Id>
+    <Name>Doublerizer</Name>
+    <Icon>I_Sta_07</Icon>
+    <Sprite>Sp_Ubl_07</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>3</Rarity>
+    <Cost>8</Cost>
+    <Hp>800</Hp>
+    <Armor>2</Armor>
+    <RangeView>4.5</RangeView>
+    <RangeAtk>4.5</RangeAtk>
+    <AttackRadio>.25</AttackRadio>
+    <Attack>12</Attack>
+    <SpeedAttack>1</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>4</Ncannons>
+    <Poblation>1</Poblation>
+    <IsInmune>false</IsInmune>
+    <SyncAnimAngle>true</SyncAnimAngle>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.5</BulletSize>
+    <BulletType>1</BulletType>
+  </Unit>
+  
+ <Unit IdName="U_Station_08" Type="Station" >
+    <Id>8</Id>
+    <Name>Sentry</Name>
+    <Icon>I_Sta_08</Icon>
+    <Sprite>Sp_Ubl_08</Sprite>
+   <Skins>
+     <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+     <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+   </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>3</Cost>
+    <Hp>250</Hp>
+    <Armor>2</Armor>
+    <RangeView>4</RangeView>
+    <RangeAtk>3</RangeAtk>
+    <Attack>8</Attack>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>4</Ncannons>
+    <SyncAnimAngle>true</SyncAnimAngle>
+    <BulletSpeed>16</BulletSpeed>
+    <BulletSize>.25</BulletSize>
+    <BulletType>0</BulletType>
+ </Unit>
+    
+ <Unit IdName="U_Station_09" Type="Station" >
+    <Id>9</Id>
+    <Name>Roboblaster</Name>
+    <Icon>I_Sta_09</Icon>
+    <Sprite>Sp_Ubl_09</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>0</Rarity>
+    <Cost>4</Cost>
+    <Hp>400</Hp>
+    <Armor>4</Armor>
+    <RangeView>8</RangeView>
+    <RangeAtk>8</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <Attack>32</Attack>
+    <SpeedAttack>1.5</SpeedAttack>
+    <SpawnArea>2</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>2</Ncannons>
+    <SyncAnimAngle>true</SyncAnimAngle>
+    <BulletSpeed>12</BulletSpeed>
+   <BulletSize>1</BulletSize>
+    <Critical>0.25</Critical>
+</Unit>
+
+  <Unit IdName="U_Station_10" Type="Station" >
+    <Id>10</Id>
+    <Name>Robogunner</Name>
+    <Icon>I_Sta_10</Icon>
+    <Sprite>Sp_Ubl_10</Sprite>
+  <Skins>
+    <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+    <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+  </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>4</Cost>
+    <Hp>400</Hp>
+    <Armor>4</Armor>
+    <RangeView>6</RangeView>
+    <RangeAtk>6</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <DirectShoot>false</DirectShoot>
+  <DirectShootRadio>0</DirectShootRadio>
+    <Speed>0</Speed>
+    <Attack>12</Attack>
+    <SpeedAttack>0.5</SpeedAttack>
+    <SpawnArea>2</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>3</Ncannons>
+    <SyncAnimAngle>true</SyncAnimAngle>
+    <BulletSpeed>7</BulletSpeed>
+    <BulletSize>0.5</BulletSize>
+    <BulletType>0</BulletType>
+</Unit>
+
+  <Unit IdName="U_Station_11" Type="Station" >
+    <Id>11</Id>
+    <Name>Enclosure</Name>
+    <Icon>I_Sta_11</Icon>
+    <Sprite>Sp_Ubl_11</Sprite>
+  <Skins>
+    <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+    <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+  </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"> A Big Station</Description>
+    <Description lan="Spanish"> Una Gran station</Description>
+    <Size>1</Size>
+    <Rarity>1</Rarity>
+    <Cost>8</Cost>
+    <Hp>800</Hp>
+    <Armor>2</Armor>
+    <RangeView>0</RangeView>
+    <RangeAtk>0</RangeAtk>
+    <AttackRadio>0</AttackRadio>
+    <DirectShoot>false</DirectShoot>
+    <DirectShootRadio>0</DirectShootRadio>
+    <Speed>0</Speed>
+    <Attack>0</Attack>
+    <SpeedAttack>0</SpeedAttack>
+    <SpawnArea>4</SpawnArea>
+    <CastDelay>0.5</CastDelay>
+    <Ncannons>0</Ncannons>
+    <Poblation>0</Poblation>
+    <IsInmune>false</IsInmune>
+    <BulletSpeed>0</BulletSpeed>
+    <BulletSize>1</BulletSize>
+    <BulletType>0</BulletType>
+    <HpRegen>0</HpRegen>
+    <AfterShockDMG>0</AfterShockDMG>
+    <AfterShockRange>0</AfterShockRange>
+    <Critical>0</Critical>
+    <Vampiric>0</Vampiric>
+    <Banck>0</Banck>
+    <BerserkMaxDMG>0</BerserkMaxDMG>
+    <Energize>0</Energize>
+    <ChargeDMG>0</ChargeDMG>
+    <SpawnUnit>U_Ship_06</SpawnUnit>
+    <SpawnUnitTime>15</SpawnUnitTime>
+</Unit>
+
+    <Unit IdName="U_Station_12" Type="Station" >
+      <Id>12</Id>
+      <Name>Hangar</Name>
+      <Icon>I_Sta_12</Icon>
+      <Sprite>Sp_Ubl_12</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+      <ExistInCollection>1</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>7</Cost>
+      <Hp>800</Hp>
+      <Armor>4</Armor>
+      <RangeView>0</RangeView>
+      <RangeAtk>0</RangeAtk>
+      <AttackRadio>0</AttackRadio>
+      <DirectShoot>false</DirectShoot>
+      <DirectShootRadio>0</DirectShootRadio>
+      <Speed>0</Speed>
+      <Attack>0</Attack>
+      <SpeedAttack>0</SpeedAttack>
+      <SpawnArea>4</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+      <Ncannons>0</Ncannons>
+      <Poblation>0</Poblation>
+      <IsInmune>false</IsInmune>
+      <BulletSpeed>0</BulletSpeed>
+      <BulletSize>1</BulletSize>
+      <BulletType>0</BulletType>
+      <HpRegen>0</HpRegen>
+      <AfterShockDMG>0</AfterShockDMG>
+      <AfterShockRange>0</AfterShockRange>
+      <Critical>0</Critical>
+      <Vampiric>0</Vampiric>
+      <Banck>0</Banck>
+      <BerserkMaxDMG>0</BerserkMaxDMG>
+      <Energize>0</Energize>
+      <ChargeDMG>0</ChargeDMG>
+      <SpawnUnit>U_Ship_16</SpawnUnit>
+      <SpawnUnitTime>15</SpawnUnitTime>
+  </Unit>
+
+   <Unit IdName="U_Station_13" Type="Station" >
+      <Id>13</Id>
+      <Name>Olmec</Name>
+      <Icon>I_Sta_13</Icon>
+      <Sprite>Sp_Ubl_13</Sprite>
+     <Skins>
+       <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+       <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+     </Skins>
+      <ExistInCollection>0</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>4</Cost>
+      <Hp>450</Hp>
+      <Armor>4</Armor>
+      <RangeView>12</RangeView>
+      <RangeAtk>12</RangeAtk>
+      <AttackRadio>0</AttackRadio>
+      <DirectShoot>false</DirectShoot>
+     <DirectShootRadio>0</DirectShootRadio>
+      <Speed>0</Speed>
+      <Attack>42</Attack>
+      <SpeedAttack>2</SpeedAttack>
+      <SpawnArea>2</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+      <Ncannons>1</Ncannons>
+      <Poblation>1</Poblation>
+      <IsInmune>false</IsInmune>
+     <SyncAnimAngle>true</SyncAnimAngle>
+      <BulletSpeed>8</BulletSpeed>
+     <BulletSize>1</BulletSize>
+      <BulletType>0</BulletType>
+      <HpRegen>0</HpRegen>
+      <AfterShockDMG>0</AfterShockDMG>
+     <AfterShockRange>0</AfterShockRange>
+      <Critical>0</Critical>
+      <Vampiric>0</Vampiric>
+      <Banck>0</Banck>
+      <BerserkMaxDMG>0</BerserkMaxDMG>
+      <Energize>0</Energize>
+      <ChargeDMG>0</ChargeDMG>
+      <SpawnUnit>none</SpawnUnit>
+      <SpawnUnitTime>0</SpawnUnitTime>
+  </Unit>
+
+   <Unit IdName="U_Station_14" Type="Station" >
+      <Id>14</Id>
+      <Name>Factory</Name>
+      <Icon>I_Sta_14</Icon>
+      <Sprite>Sp_Ubl_14</Sprite>
+     <Skins>
+       <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+       <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+     </Skins>
+      <ExistInCollection>1</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>5</Cost>
+      <Hp>800</Hp>
+      <Armor>2</Armor>
+      <SpawnArea>5</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+     <SyncAnimAngle>true</SyncAnimAngle>
+      <SpawnUnit>U_Squad_05</SpawnUnit>
+      <SpawnUnitTime>15</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Station_15" Type="Station" >
+      <Id>15</Id>
+      <Name>Oblivion</Name>
+      <Icon>I_Sta_15</Icon>
+      <Sprite>Sp_Ubl_15</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+      <ExistInCollection>0</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>7</Cost>
+      <Hp>900</Hp>
+      <Armor>4</Armor>
+      <RangeView>2</RangeView>
+      <RangeAtk>1</RangeAtk>
+      <DirectShoot>true</DirectShoot>
+	  <DirectShootRadio>1</DirectShootRadio>
+      <Speed>0</Speed>
+      <Attack>40</Attack>
+      <SpeedAttack>8</SpeedAttack>
+      <SpawnArea>4</SpawnArea>
+      <CastDelay>2</CastDelay>
+      <Duration>90</Duration>
+      <Ncannons>1</Ncannons>
+      <Poblation>1</Poblation>      
+      <BulletSpeed>80</BulletSpeed>
+      <BulletSize>.5</BulletSize>
+      <BulletType>2</BulletType>
+  </Unit>
+
+  <Unit IdName="U_Station_16" Type="Station" >
+      <Id>16</Id>
+      <Name>Spaceform X5</Name>
+      <Icon>I_Sta_16</Icon>
+      <Sprite>Sp_Ubl_16</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+      <ExistInCollection>0</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>2</Cost>
+      <Hp>350</Hp>
+      <Armor>4</Armor>
+      <RangeView>2</RangeView>
+      <RangeAtk>10</RangeAtk>
+      <AttackRadio>0</AttackRadio>
+      <DirectShoot>false</DirectShoot>
+    <DirectShootRadio>0</DirectShootRadio>
+      <Speed>0</Speed>
+      <Attack>0</Attack>
+      <SpeedAttack>.5</SpeedAttack>
+      <SpawnArea>5</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+      <Duration>45</Duration>
+      <Ncannons>1</Ncannons>
+      <Poblation>1</Poblation>
+      <IsInmune>false</IsInmune>
+    <SyncAnimAngle>true</SyncAnimAngle>
+      <BulletSpeed>7</BulletSpeed>
+    <BulletSize>1</BulletSize>
+      <BulletType>0</BulletType>
+      <HpRegen>0</HpRegen>
+      <AfterShockDMG>0</AfterShockDMG>
+   	  <AfterShockRange>0</AfterShockRange>
+      <Critical>0</Critical>
+      <Vampiric>0</Vampiric>
+      <Banck>0</Banck>
+      <BerserkMaxDMG>0</BerserkMaxDMG>
+      <Energize>0</Energize>
+      <ChargeDMG>0</ChargeDMG>
+      <SpawnUnit>none</SpawnUnit>
+      <SpawnUnitTime>0</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Station_17" Type="Station" >
+      <Id>17</Id>
+      <Name>Spaceform Z3</Name>
+      <Icon>I_Sta_17</Icon>
+      <Sprite>Sp_Ubl_17</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+      <ExistInCollection>0</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>2</Cost>
+      <Hp>350</Hp>
+      <Armor>4</Armor>
+      <RangeView>2</RangeView>
+      <RangeAtk>10</RangeAtk>
+      <AttackRadio>0</AttackRadio>
+      <DirectShoot>false</DirectShoot>
+    <DirectShootRadio>0</DirectShootRadio>
+      <Speed>0</Speed>
+      <Attack>0</Attack>
+      <SpeedAttack>.5</SpeedAttack>
+      <SpawnArea>5</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+      <Duration>45</Duration>
+      <Ncannons>1</Ncannons>
+      <Poblation>1</Poblation>
+      <IsInmune>false</IsInmune>
+    <SyncAnimAngle>true</SyncAnimAngle>
+      <BulletSpeed>7</BulletSpeed>
+    <BulletSize>1</BulletSize>
+      <BulletType>0</BulletType>
+      <HpRegen>0</HpRegen>
+      <AfterShockDMG>0</AfterShockDMG>
+     <AfterShockRange>0</AfterShockRange>
+      <Critical>0</Critical>
+      <Vampiric>0</Vampiric>
+      <Banck>0</Banck>
+      <BerserkMaxDMG>0</BerserkMaxDMG>
+      <Energize>0</Energize>
+      <ChargeDMG>0</ChargeDMG>
+      <SpawnUnit>none</SpawnUnit>
+      <SpawnUnitTime>0</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Station_18" Type="Station" >
+      <Id>18</Id>
+      <Name>Spaceform X3</Name>
+      <Icon>I_Sta_18</Icon>
+      <Sprite>Sp_Ubl_18</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+      <ExistInCollection>0</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>2</Cost>
+      <Hp>350</Hp>
+      <Armor>4</Armor>
+      <RangeView>2</RangeView>
+      <RangeAtk>10</RangeAtk>
+      <AttackRadio>0</AttackRadio>
+      <DirectShoot>false</DirectShoot>
+    <DirectShootRadio>0</DirectShootRadio>
+      <Speed>0</Speed>
+      <Attack>0</Attack>
+      <SpeedAttack>.5</SpeedAttack>
+      <SpawnArea>5</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+      <Ncannons>1</Ncannons>
+      <Poblation>1</Poblation>
+      <IsInmune>false</IsInmune>
+    <SyncAnimAngle>true</SyncAnimAngle>
+      <BulletSpeed>7</BulletSpeed>
+    <BulletSize>1</BulletSize>
+      <BulletType>0</BulletType>
+      <HpRegen>0</HpRegen>
+      <AfterShockDMG>0</AfterShockDMG>
+    <AfterShockRange>0</AfterShockRange>
+      <Critical>0</Critical>
+      <Vampiric>0</Vampiric>
+      <Banck>0</Banck>
+      <BerserkMaxDMG>0</BerserkMaxDMG>
+      <Energize>0</Energize>
+      <ChargeDMG>0</ChargeDMG>
+      <SpawnUnit>none</SpawnUnit>
+      <SpawnUnitTime>0</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Station_19" Type="Station" >
+      <Id>19</Id>
+      <Name>Celestron</Name>
+      <Icon>I_Sta_19</Icon>
+      <Sprite>Sp_Ubl_19</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+      <ExistInCollection>1</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>2</Rarity>
+      <Cost>4</Cost>
+      <Hp>320</Hp>
+      <Armor>1</Armor>
+      <SpawnArea>6</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+      <IsInmune>false</IsInmune>
+      <SyncAnimAngle>true</SyncAnimAngle>
+      <BulletSpeed>0</BulletSpeed>
+      <Banck>2</Banck>
+      <Energize>0.1</Energize>
+  </Unit>
+
+  <Unit IdName="U_Station_20" Type="Station" >
+      <Id>20</Id>
+      <Name>Stargate</Name>
+      <Icon>I_Sta_20</Icon>
+      <Sprite>Sp_Ubl_20</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+      <ExistInCollection>1</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>2</Rarity>
+      <Cost>10</Cost>
+      <Hp>1800</Hp>
+      <Armor>4</Armor>
+      <SpawnArea>4</SpawnArea>
+      <CastDelay>1</CastDelay>
+      <SpawnUnit>U_Squad_07</SpawnUnit>
+      <SpawnUnitTime>30</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Station_21" Type="Station" >
+      <Id>21</Id>
+      <Name>Optron</Name>
+      <Icon>I_Sta_21</Icon>
+      <Sprite>Sp_Ubl_21</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+      <ExistInCollection>0</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>2</Cost>
+      <Hp>350</Hp>
+      <Armor>3</Armor>
+      <RangeView>0</RangeView>
+      <RangeAtk>0</RangeAtk>
+      <AttackRadio>0</AttackRadio>
+      <DirectShoot>false</DirectShoot>
+    <DirectShootRadio>0</DirectShootRadio>
+      <Speed>0</Speed>
+      <Attack>0</Attack>
+      <SpeedAttack>0</SpeedAttack>
+      <SpawnArea>6</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+      <Ncannons>1</Ncannons>
+      <Poblation>1</Poblation>
+      <BulletSpeed>7</BulletSpeed>
+    <BulletSize>1</BulletSize>
+      <BulletType>0</BulletType>
+      <HpRegen>0</HpRegen>
+      <AfterShockDMG>0</AfterShockDMG>
+      <AfterShockRange>0</AfterShockRange>
+      <Critical>0</Critical>
+      <Vampiric>0</Vampiric>
+      <Banck>0</Banck>
+      <BerserkMaxDMG>0</BerserkMaxDMG>
+      <Energize>0</Energize>
+      <ChargeDMG>0</ChargeDMG>
+      <SpawnUnit>none</SpawnUnit>
+      <SpawnUnitTime>0</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Station_22" Type="Station" >
+      <Id>22</Id>
+      <Name>Helix</Name>
+      <Icon>I_Sta_22</Icon>
+      <Sprite>Sp_Ubl_22</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+      <ExistInCollection>0</ExistInCollection>
+      <MaxLevel>3</MaxLevel>
+      <Description lan="English"> A Big Station</Description>
+      <Description lan="Spanish"> Una Gran station</Description>
+      <Size>1</Size>
+      <Rarity>0</Rarity>
+      <Cost>2</Cost>
+      <Hp>1200</Hp>
+      <Armor>8</Armor>
+      <SpawnArea>8</SpawnArea>
+      <CastDelay>0.5</CastDelay>
+      <Duration>45</Duration>
+      <SpawnUnit>U_Squad_02</SpawnUnit>
+      <SpawnUnitTime>20</SpawnUnitTime>
+  </Unit>
+
+  <Unit IdName="U_Skill_01" Type="Skill" >
+    <Id>1</Id>
+    <Name>Overclock</Name>
+    <Icon>I_Skill_01</Icon>
+    <Sprite>Sp_fxs_04</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Boost your units power</Description>
+    <Description lan="Spanish">Aumenta el poder y velocidad de tus unidades</Description>
+    <Rarity>0</Rarity>
+    <Cost>1</Cost>
+    <RangeView>1</RangeView>
+    <Power>0.5</Power>
+    <Boost>0.5</Boost>
+    <Duration>4</Duration>
+    <CastDelay>0.5</CastDelay>
+  </Unit>
+
+
+  <Unit IdName="U_Skill_02" Type="Skill" >
+    <Id>2</Id>
+    <Name>Shock n Awe</Name>
+    <Icon>I_Skill_02</Icon>
+    <Sprite>Sp_fxs_11</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Paralizing force impact</Description>
+    <Description lan="Spanish">Impacto de fuerza paralizante</Description>
+    <Rarity>2</Rarity>
+    <Cost>2</Cost>
+    <RangeView>2</RangeView>
+    <Power>100</Power>
+    <Duration>2</Duration>
+    <CastDelay>0</CastDelay>
+  </Unit>
+
+  <Unit IdName="U_Skill_03" Type="Skill" >
+    <Id>3</Id>
+    <Name>Hijack</Name>
+    <Icon>I_Skill_03</Icon>
+    <Sprite>Sp_fxs_10</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Briefly gain control of enemy units</Description>
+    <Description lan="Spanish">Gana control brevemente de unidades enemigas</Description>
+    <Rarity>2</Rarity>
+    <Cost>4</Cost>
+    <RangeView>1</RangeView>
+    <CastDelay>0.5</CastDelay>
+    <Duration>2</Duration>
+  </Unit>
+
+
+  <Unit IdName="U_Skill_04" Type="Skill" >
+    <Id>4</Id>
+    <Name>Force Field</Name>
+    <Icon>I_Skill_04</Icon>
+    <Sprite>Sp_fxs_12</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Dome of protection</Description>
+    <Description lan="Spanish">Domo de protección</Description>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <RangeView>4</RangeView>
+    <CastDelay>1</CastDelay>
+    <Duration>5</Duration>
+  </Unit>
+
+  <Unit IdName="U_Skill_05" Type="Skill" >
+    <Id>5</Id>
+    <Name>Laserhawk</Name>
+    <Icon>I_Skill_05</Icon>
+    <Sprite>Sp_fxs_05</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Long range laser weapon</Description>
+    <Description lan="Spanish">Arma laser de largo alcance</Description>
+    <Rarity>3</Rarity>
+    <Cost>3</Cost>
+    <RangeView>1</RangeView>
+    <CastDelay>1</CastDelay>
+    <Duration>2</Duration>
+    <Power>10</Power>
+  </Unit>
+
+  <Unit IdName="U_Skill_06" Type="Skill" >
+    <Id>6</Id>
+    <Name>Energizer</Name>
+    <Icon>I_Skill_06</Icon>
+    <Sprite>Sp_fxs_09</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Gives you some extra energy</Description>
+    <Description lan="Spanish">Genera energía extra</Description>
+    <Rarity>0</Rarity>
+    <Cost>1</Cost>
+    <CastDelay>0.5</CastDelay>
+    <Power>3</Power>
+    <Duration>2</Duration>
+  </Unit>
+
+  <Unit IdName="U_Skill_07" Type="Skill" >
+    <Id>7</Id>
+    <Name>Inmortal Phase</Name>
+    <Icon>I_Skill_07</Icon>
+    <Sprite>Sp_fxs_06	</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Makes units invincible over a short period of time</Description>
+    <Description lan="Spanish">Hace invencibles a una unidad por un corto tiempo</Description>
+    <Rarity>2</Rarity>
+    <Cost>2</Cost>
+    <RangeView>1</RangeView>
+    <CastDelay>0.1</CastDelay>
+    <Duration>5</Duration>
+  </Unit>
+
+  <Unit IdName="U_Skill_08" Type="Skill" >
+    <Id>8</Id>
+    <Name>Black Hole</Name>
+    <Icon>I_Skill_08</Icon>
+    <Sprite>Sp_fxs_03</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Strong gravitational pull</Description>
+    <Description lan="Spanish">Una fuerte atracción gravitacional</Description>
+    <Rarity>3</Rarity>
+    <Cost>4</Cost>
+    <RangeView>2</RangeView>
+    <CastDelay>0.5</CastDelay>
+    <Power>80</Power>
+    <Boost>2</Boost>
+    <Duration>4</Duration>
+  </Unit>
+  
+  <Unit IdName="U_Skill_09" Type="Skill" >
+    <Id>9</Id>
+    <Name>Solar Mirror</Name>
+    <Icon>I_Skill_03</Icon>
+    <Sprite>Sp_fxs_04</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Makes a unit stronger and reflects recieved damage</Description>
+    <Description lan="Spanish">Vuelve a una unidad mas fuerte y devuelve parte del daño recibido</Description>
+    <Rarity>0</Rarity>
+    <Cost>1</Cost>
+    <CastDelay>0.5</CastDelay>
+    <RangeView>1</RangeView>
+    <Power>0.5</Power>
+    <Boost>10</Boost>
+    <Duration>4</Duration>
+  </Unit>
+  
+  <Unit IdName="U_Skill_10" Type="Skill" >
+    <Id>10</Id>
+    <Name>Contamination</Name>
+    <Icon>I_Skill_01</Icon>
+    <Sprite>Sp_fxs_04</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Polute enemies, slowing them down</Description>
+    <Description lan="Spanish">Contamina a los enemigos, reduciendo su velocidad y vida</Description>
+    <Rarity>0</Rarity>
+    <Cost>3</Cost>
+    <CastDelay>1</CastDelay>
+    <RangeView>2</RangeView>
+    <Power>20</Power>
+    <Boost>0.5</Boost>
+    <Duration>4</Duration>
+  </Unit>
+
+  <Unit IdName="U_Skill_11" Type="Skill" >
+    <Id>11</Id>
+    <Name>Black Nebula</Name>
+    <Icon>I_Skill_01</Icon>
+    <Sprite>Sp_fxs_04</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English">Blinds enemy units for </Description>
+    <Description lan="Spanish">Cega a las unidades enemigas unos segundos</Description>
+    <Rarity>0</Rarity>
+    <Cost>3</Cost>
+    <CastDelay>1</CastDelay>
+    <RangeView>2</RangeView>
+    <Duration>4</Duration>
+  </Unit>
+  
+  <Unit IdName="U_Skill_12" Type="Skill" >
+    <Id>12</Id>
+    <Name>Ghost Bomb</Name>
+    <Icon>I_Skill_04</Icon>
+    <Sprite>Sp_fxs_04</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"></Description>
+    <Description lan="Spanish">Vuelve invisible a las unidades por unos segundos</Description>
+    <Rarity>0</Rarity>
+    <Cost>3</Cost>
+    <CastDelay>1</CastDelay>
+    <RangeView>2</RangeView>
+    <Duration>4</Duration>
+  </Unit>
+  
+  <Unit IdName="U_Skill_13" Type="Skill" >
+    <Id>13</Id>
+    <Name>Thunderstorm</Name>
+    <Icon>I_Skill_05</Icon>
+    <Sprite>Sp_fxs_04</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"></Description>
+    <Description lan="Spanish">Electrocuta en cadena a una serie de enemigos</Description>
+    <Rarity>0</Rarity>
+    <Cost>1</Cost>
+    <CastDelay>0.5</CastDelay>
+    <RangeView>3</RangeView>
+    <Power>40</Power>
+    <Boost>8</Boost>
+    <Duration>2</Duration>
+  </Unit> 
+    
+  <Unit IdName="U_Skill_14" Type="Skill" >
+    <Id>14</Id>
+    <Name>Emergent Heal</Name>
+    <Icon>I_Skill_08</Icon>
+    <Sprite>Sp_fxs_04</Sprite>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Description lan="English"></Description>
+    <Description lan="Spanish">Genera un area de curacion que tambien repele a los enemigos</Description>
+    <Rarity>0</Rarity>
+    <Cost>1</Cost>
+    <CastDelay>0.5</CastDelay>
+    <RangeView>2</RangeView>
+    <Power>20</Power>
+    <Boost>20</Boost>
+    <Duration>3</Duration>
+  </Unit> 
+    
+  <Unit IdName="U_Squad_01" Type="Squad" >
+    <Id>1</Id>
+    <Name>Suicide Squad</Name>
+    <Icon>I_Squad_01</Icon>
+    <Sprite>SP_Squad_01</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_17,U_Ship_17,U_Ship_17</Ships>
+    <Positioning>0,0!1,1!-1,-1</Positioning>
+    <Description lan="English"> Kamikaze!</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Rarity>1</Rarity>
+    <Cost>2</Cost>
+    <Poblation>1</Poblation>
+    <CastDelay>1</CastDelay>
+  </Unit>
+
+  <Unit IdName="U_Squad_02" Type="Squad" >
+    <Id>2</Id>
+    <Name>Sliders</Name>
+    <Icon>I_Squad_02</Icon>
+    <Sprite>SP_Squad_02</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_15,U_Ship_15,U_Ship_15</Ships>
+    <Positioning>pyramid</Positioning>
+    <Description lan="English"> Minions</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Rarity>0</Rarity>
+    <Cost>0</Cost>
+    <Poblation>1</Poblation>
+    <CastDelay>0.25</CastDelay>
+  </Unit>
+
+  <Unit IdName="U_Squad_03" Type="Squad" >
+    <Id>3</Id>
+    <Name>Legion</Name>
+    <Icon>I_Squad_03</Icon>
+    <Sprite>SP_Squad_03</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15,U_Ship_15</Ships>
+    <Positioning>mouth</Positioning>
+    <Description lan="English"> Fear the legion!</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Rarity>0</Rarity>
+    <Cost>3</Cost>
+    <Poblation>3</Poblation>
+    <CastDelay>0.5</CastDelay>
+  </Unit>
+
+  <Unit IdName="U_Squad_04" Type="Squad" >
+    <Id>4</Id>
+    <Name>Jurassic Pack</Name>
+    <Icon>I_Squad_04</Icon>
+    <Sprite>SP_Squad_04</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_06,U_Ship_07</Ships>
+    <Positioning>0,0!1,1</Positioning>
+    <Description lan="English"> Rwarrr</Description>
+    <Description lan="Spanish"> Rwarrr</Description>
+    <Rarity>2</Rarity>
+    <Cost>6</Cost>
+    <Poblation>2</Poblation>
+    <CastDelay>1</CastDelay>
+  </Unit>
+ 
+
+  <Unit IdName="U_Squad_05" Type="Squad" >
+    <Id>5</Id>
+    <Name>Stranger Things</Name>
+    <Icon>I_Squad_05</Icon>
+    <Sprite>SP_Squad_05</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_27,U_Ship_27</Ships>
+    <Positioning>0,0!1,1</Positioning>
+    <Description lan="English"> Kamikaze!</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Rarity>0</Rarity>
+    <Cost>3</Cost>
+    <Poblation>2</Poblation>
+    <CastDelay>0.5</CastDelay>
+  </Unit>
+
+  <Unit IdName="U_Squad_06" Type="Squad" >
+    <Id>6</Id>
+    <Name>Mischief Makers</Name>
+    <Icon>I_Squad_06</Icon>
+    <Sprite>SP_Squad_06</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_35,U_Ship_33,U_Ship_20</Ships>
+    <Positioning>0,0!0.25,0.25!0.25,-0.25</Positioning>
+    <Description lan="English"> Looking for trouble!</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Rarity>1</Rarity>
+    <Cost>5</Cost>
+    <Poblation>3</Poblation>
+    <CastDelay>0.5</CastDelay>
+  </Unit>
+
+
+  <Unit IdName="U_Squad_07" Type="Squad" >
+    <Id>7</Id>
+    <Name>Angry Flies</Name>
+    <Icon>I_Squad_07</Icon>
+    <Sprite>SP_Squad_07</Sprite>
+    <Skins>
+      <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+      <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+    </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_01,U_Ship_11,U_Ship_03,U_Ship_10,U_Ship_05</Ships>
+    <Positioning>0,0!1,1!2,2!3,3!4,4</Positioning>
+    <Description lan="English"> Kamikaze!</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Rarity>3</Rarity>
+    <Cost>8</Cost>
+    <Poblation>5</Poblation>
+    <CastDelay>0.5</CastDelay>
+  </Unit>
+
+    <Unit IdName="U_Squad_08" Type="Squad" >
+    <Id>8</Id>
+    <Name>WeBes</Name>
+    <Icon>I_Squad_08</Icon>
+    <Sprite>SP_Squad_08</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>1</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_29,U_Ship_40,U_Ship_36</Ships>
+    <Positioning>0,0!1,1!2,2</Positioning>
+    <Description lan="English"> Looking for trouble!</Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Rarity>1</Rarity>
+    <Cost>4</Cost>
+    <Poblation>3</Poblation>
+    <CastDelay>0.5</CastDelay>
+  </Unit>
+
+
+    <Unit IdName="U_Squad_09" Type="Squad" >
+    <Id>9</Id>
+    <Name>Hornets</Name>
+    <Icon>I_Squad_09</Icon>
+    <Sprite>SP_Squad_09</Sprite>
+      <Skins>
+        <Skin IdSkin="Classic" Hue="-1" Rarity="0">Classic Unit</Skin>
+        <Skin IdSkin="Gold" Hue="220" Rarity="0">Golden Unit</Skin>
+      </Skins>
+    <ExistInCollection>0</ExistInCollection>
+    <MaxLevel>3</MaxLevel>
+    <Ships>U_Ship_14,U_Ship_14</Ships>
+    <Positioning>0,0!-1,1</Positioning>
+    <Description lan="English"></Description>
+    <Description lan="Spanish"> Una Gran Nave</Description>
+    <Rarity>0</Rarity>
+    <Cost>0</Cost>
+    <Poblation>2</Poblation>
+    <CastDelay>0.5</CastDelay>
+  </Unit>
+
+
+</Units>

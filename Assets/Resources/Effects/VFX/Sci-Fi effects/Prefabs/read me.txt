@@ -1,0 +1,5 @@
+Laser beams can collide with colliders
+Laser beams work only in play mode
+
+You need to use "LookAt();" for bullets and missiles.
+If the effect has an incorrect, then you need to change it in the tab "Shape"
