@@ -765,6 +765,16 @@ public class Scr_Database : Photon.MonoBehaviour
             scr_StatsPlayer.PlayerAvUnits[0].Add(unit.Name);
         }
 
+        // Fill decks 1 and 2 with the same units to ensure they have 8 cards each
+        for (int deckIndex = 1; deckIndex < 3; deckIndex++)
+        {
+            for (int i = 0; i < devUnitNames.Length; i++)
+            {
+                scr_StatsPlayer.PlayerDeck[deckIndex].Add(devUnitNames[i]);
+                scr_StatsPlayer.PlayerAvUnits[deckIndex].Add(devUnitNames[i]);
+            }
+        }
+
         // --- DEV: Initialize all player stats for UI compatibility ---
         scr_StatsPlayer.id = 999;
         scr_StatsPlayer.iduser = 999;
@@ -835,6 +845,9 @@ public class Scr_Database : Photon.MonoBehaviour
         scr_StatsPlayer.Name_deck[0] = "Dev Deck";
         scr_StatsPlayer.Name_deck[1] = "Deck 2";
         scr_StatsPlayer.Name_deck[2] = "Deck 3";
+
+        // Initialize missions (required for end-game processing)
+        scr_Missions.InitMissions();
 
         // -------------------------------------------
 

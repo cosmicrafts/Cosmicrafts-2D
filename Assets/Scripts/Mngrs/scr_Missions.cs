@@ -1,4 +1,6 @@
 ﻿
+using UnityEngine;
+
 public class scr_Missions
 {
     public static int[] MD_Progress;
@@ -44,6 +46,20 @@ public class scr_Missions
 
     public static void AddProgress(int mission, int amount)
     {
+        // Safety check: ensure arrays are initialized
+        if (MD_Progress == null || MW_Progress == null)
+        {
+            Debug.LogWarning("Missions arrays not initialized, skipping progress update");
+            return;
+        }
+        
+        // Safety check: ensure mission index is valid
+        if (mission < 0 || mission >= MD_Progress.Length || mission >= MW_Progress.Length)
+        {
+            Debug.LogWarning("Invalid mission index: " + mission + ", skipping progress update");
+            return;
+        }
+        
         MD_Progress[mission] += amount;
         if (MD_Progress[mission] > MD_Goal[mission]) { MD_Progress[mission] = MD_Goal[mission]; }
         MW_Progress[mission] += amount;
@@ -52,6 +68,15 @@ public class scr_Missions
 
     public static void CheckProgressComplete()
     {
+        // Safety check: ensure arrays are initialized
+        if (MD_Progress == null || MW_Progress == null)
+        {
+            Debug.LogWarning("Missions arrays not initialized, skipping progress check");
+            Day_Complete = false;
+            Week_Complete = false;
+            return;
+        }
+        
         Day_Complete = (MD_Progress[0]>= MD_Goal[0] && MD_Progress[1] >= MD_Goal[1] && MD_Progress[2] >= MD_Goal[2] && MD_Progress[3] >= MD_Goal[3] && MD_Progress[4] >= MD_Goal[4]);
         Week_Complete = (MW_Progress[0] >= MW_Goal[0] && MW_Progress[1] >= MW_Goal[1] && MW_Progress[2] >= MW_Goal[2] && MW_Progress[3] >= MW_Goal[3] && MW_Progress[4] >= MW_Goal[4]);
     }

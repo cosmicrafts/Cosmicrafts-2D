@@ -63,7 +63,9 @@ public class scr_FriendRequest : Photon.MonoBehaviour {
         while (true)
         {
             yield return Delay2s;
-            if (PhotonNetwork.offlineMode)
+            
+            // Skip all friend request processing in dev mode
+            if (PhotonNetwork.offlineMode || Scr_Database.DEV_BYPASS)
                 continue;
 
             if (scr_StatsPlayer.CurrentState != 5 && scr_StatsPlayer.CurrentState != 6)

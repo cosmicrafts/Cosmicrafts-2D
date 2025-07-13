@@ -229,6 +229,12 @@ public class scr_MNGame : Photon.MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
             StartSelection();*/
 
+        // Periodically clean up destroyed units from selection
+        if (Time.frameCount % 30 == 0) // Every 30 frames (about 0.5 seconds at 60fps)
+        {
+            CleanupDestroyedUnits();
+        }
+
         Commands();
         UpdateUIShips();
         ShowFps();
@@ -450,9 +456,12 @@ public class scr_MNGame : Photon.MonoBehaviour {
 
     public void SetDestinationSelected(Vector2 _dest, bool is_objective)
     {
+        // Clean up destroyed units first
+        CleanupDestroyedUnits();
+        
         for (int i = 0; i < Selected.Count; i++)
         {
-            if (Selected[i].NS.CanMove)
+            if (Selected[i] != null && Selected[i].NS != null && Selected[i].NS.CanMove && Selected[i].MyMove != null)
             {
                 Selected[i].MyMove.SetNewDestination(_dest, is_objective);
             }                
@@ -461,7 +470,10 @@ public class scr_MNGame : Photon.MonoBehaviour {
 
     public void DefenseSelected()
     {
-        if (Selected.Count > 0)
+        // Clean up destroyed units first
+        CleanupDestroyedUnits();
+        
+        if (Selected.Count > 0 && Selected[0] != null)
         {
             CreateCommandSign(2, Selected[0].transform);
             Special_Command = true;
@@ -469,7 +481,7 @@ public class scr_MNGame : Photon.MonoBehaviour {
 
         for (int i = 0; i < Selected.Count; i++)
         {
-            if (Selected[i].NS.CanMove)
+            if (Selected[i] != null && Selected[i].NS != null && Selected[i].NS.CanMove && Selected[i].MyMove != null)
             {
                 if (Selected[i].MyMove.Stops_Counter >= 3)
                     continue;
@@ -485,21 +497,42 @@ public class scr_MNGame : Photon.MonoBehaviour {
 
     public void SetStopSelected()
     {
+        // Clean up destroyed units first
+        CleanupDestroyedUnits();
+        
         for (int i = 0; i < Selected.Count; i++)
         {
-            if (Selected[i].NS.CanMove)
+            if (Selected[i] != null && Selected[i].NS != null && Selected[i].NS.CanMove && Selected[i].MyMove != null)
                 Selected[i].MyMove.StopShip();
         }
     }
 
     public void ClearSelected()
     {
+        // Clean up any destroyed units first
+        CleanupDestroyedUnits();
+        
         for (int i = 0; i < Selected.Count; i++)
         {
-            Selected[i].MyUI.Image_Selection.color = UnSelected;
-            Selected[i].isSelected = false;
+            if (Selected[i] != null && Selected[i].MyUI != null && Selected[i].MyUI.Image_Selection != null)
+            {
+                Selected[i].MyUI.Image_Selection.color = UnSelected;
+                Selected[i].isSelected = false;
+            }
         }
         Selected.Clear();
+    }
+
+    // Helper method to remove destroyed units from selection
+    public void CleanupDestroyedUnits()
+    {
+        for (int i = Selected.Count - 1; i >= 0; i--)
+        {
+            if (Selected[i] == null)
+            {
+                Selected.RemoveAt(i);
+            }
+        }
     }
 
     public void AddSelection(scr_Unit _add)
@@ -520,13 +553,16 @@ public class scr_MNGame : Photon.MonoBehaviour {
 
     public void SelectUnit(scr_Unit _unit)
     {
-        if (Selected.Contains(_unit) || !_unit.NS.CanMove)
+        if (_unit == null || Selected.Contains(_unit) || _unit.NS == null || !_unit.NS.CanMove)
             return;
 
         Selected.Add(_unit);
-        _unit.MyUI.Image_Selection.color = Color.yellow;
-        _unit.isSelected = true;
-        _unit.RedySelect = false;
+        if (_unit.MyUI != null && _unit.MyUI.Image_Selection != null)
+        {
+            _unit.MyUI.Image_Selection.color = Color.yellow;
+            _unit.isSelected = true;
+            _unit.RedySelect = false;
+        }
     }
 
     public void DeselectUnit(scr_Unit _delete)
@@ -534,8 +570,11 @@ public class scr_MNGame : Photon.MonoBehaviour {
         if (Selected.Contains(_delete))
         {
             Selected.Remove(_delete);
-            _delete.MyUI.Image_Selection.color = UnSelected;
-            _delete.isSelected = false;
+            if (_delete != null && _delete.MyUI != null && _delete.MyUI.Image_Selection != null)
+            {
+                _delete.MyUI.Image_Selection.color = UnSelected;
+                _delete.isSelected = false;
+            }
         }
 
         CanUseCommands(false);
@@ -560,10 +599,13 @@ public class scr_MNGame : Photon.MonoBehaviour {
 
     public bool CanUseCommands(bool on_if_true)
     {
+        // Clean up destroyed units first
+        CleanupDestroyedUnits();
+        
         bool OneControl = false;
         for (int i = 0; i < Selected.Count; i++)
         {
-            if (Selected[i].MyMove.Stops_Counter < 3)
+            if (Selected[i] != null && Selected[i].MyMove != null && Selected[i].MyMove.Stops_Counter < 3)
             {
                 OneControl = true;
                 break;
@@ -600,8 +642,13 @@ public class scr_MNGame : Photon.MonoBehaviour {
         {
             Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+            // Clean up destroyed units before processing commands
+            CleanupDestroyedUnits();
+
             for (int i=0; i<Selected.Count; i++)
             {
+                if (Selected[i] == null) continue; // Skip null units
+                
                 if (!Selected[i].RedySelect)
                     Selected[i].RedySelect = true;
                 else if (Vector2.Distance(transform.position, mouse) > 1f)
@@ -610,8 +657,11 @@ public class scr_MNGame : Photon.MonoBehaviour {
                         CreateCommandSign(0, null);
                     if (Selected[i].delay_defend) { Selected[i].delay_defend = false; } else
                     {
-                        Selected[i].MyMove.SetNewDestination(mouse, false);
-                        Selected[i].MyMove.Delay_Position = 0f;
+                        if (Selected[i].MyMove != null)
+                        {
+                            Selected[i].MyMove.SetNewDestination(mouse, false);
+                            Selected[i].MyMove.Delay_Position = 0f;
+                        }
                     } 
                 }
             }

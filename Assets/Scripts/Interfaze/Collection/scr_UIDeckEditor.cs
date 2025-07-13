@@ -266,21 +266,55 @@ public class scr_UIDeckEditor : MonoBehaviour {
 
     public void OrderSelectedCards()
     {
+        // Safety check: ensure deck has exactly 8 cards
         if (scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].Count != 8)
-            Debug.LogError("Lost Cards in Deck");
+        {
+            Debug.LogError("Lost Cards in Deck - Expected 8, got " + scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].Count);
+            
+            // Fix the deck by adding missing cards or removing excess
+            while (scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].Count < 8)
+            {
+                // Add a default unit if we have any available
+                if (scr_StatsPlayer.PlayerAvUnits[scr_StatsPlayer.idc].Count > 0)
+                {
+                    string defaultUnit = scr_StatsPlayer.PlayerAvUnits[scr_StatsPlayer.idc][0];
+                    scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].Add(defaultUnit);
+                }
+                else
+                {
+                    // Fallback to a hardcoded unit
+                    scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].Add("U_Ship_01");
+                }
+            }
+            
+            // Remove excess cards if more than 8
+            while (scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].Count > 8)
+            {
+                scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].RemoveAt(scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].Count - 1);
+            }
+        }
 
         int TotalCost = 0;
 
         for (int i = 0; i < Slots.Length; i++)
         {
             Slots[i].Clear();
-            string idname = scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc][i];
-            Slots[i].SetUnit(idname);
-            Slots[i].empty = false;
-            Slots[i].UpdateInfo();
-            int cost = 0;
-            int.TryParse(scr_GetStats.GetPropUnit(idname, "Cost"), out cost);
-            TotalCost += cost;
+            
+            // Safety check for array bounds
+            if (i < scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc].Count)
+            {
+                string idname = scr_StatsPlayer.PlayerDeck[scr_StatsPlayer.idc][i];
+                Slots[i].SetUnit(idname);
+                Slots[i].empty = false;
+                Slots[i].UpdateInfo();
+                int cost = 0;
+                int.TryParse(scr_GetStats.GetPropUnit(idname, "Cost"), out cost);
+                TotalCost += cost;
+            }
+            else
+            {
+                Slots[i].empty = true;
+            }
         }
         
         float FACost = (TotalCost / 8f);

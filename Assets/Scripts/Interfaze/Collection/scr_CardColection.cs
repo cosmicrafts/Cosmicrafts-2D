@@ -54,6 +54,25 @@ public class scr_CardColection : MonoBehaviour
     {
         if (!ManagerCards.to_drop && !empty && !ManagerCards.LoadingCards)
         {
+            // Ensure scr_Resources is initialized
+            if (scr_Resources.DragUnit == null)
+            {
+                // Find or create scr_Resources component
+                scr_Resources resources = FindObjectOfType<scr_Resources>();
+                if (resources == null)
+                {
+                    GameObject resourcesGO = new GameObject("scr_Resources");
+                    resources = resourcesGO.AddComponent<scr_Resources>();
+                }
+                
+                // Force initialization if DragUnit is still null
+                if (scr_Resources.DragUnit == null)
+                {
+                    Debug.LogWarning("DragUnit still null, creating dynamic one");
+                    scr_Resources.DragUnit = CreateDynamicDragUnitForEditor();
+                }
+            }
+            
             ManagerCards.go_remplace = this;
             if  (InDeck)
                 ManagerCards.CardPosition = i_IndexDeck;
@@ -128,5 +147,51 @@ public class scr_CardColection : MonoBehaviour
     public void Clear()
     {
         empty = true;
+    }
+
+    private GameObject CreateDynamicDragUnitForEditor()
+    {
+        // Create a dynamic DragUnit GameObject for the deck editor
+        GameObject dragUnit = new GameObject("DynamicDragUnit_Editor");
+        
+        // Add the required components
+        dragUnit.AddComponent<scr_DragUnit>();
+        
+        // Add SpriteRenderer for the main sprite
+        SpriteRenderer mainSprite = dragUnit.AddComponent<SpriteRenderer>();
+        mainSprite.sortingOrder = 100; // Ensure it renders on top
+        
+        // Create child objects for the different sprite components
+        GameObject spriteBase = new GameObject("SpriteBase");
+        spriteBase.transform.SetParent(dragUnit.transform);
+        SpriteRenderer baseSprite = spriteBase.AddComponent<SpriteRenderer>();
+        baseSprite.sortingOrder = 99;
+        
+        GameObject negative = new GameObject("Negative");
+        negative.transform.SetParent(dragUnit.transform);
+        SpriteRenderer negSprite = negative.AddComponent<SpriteRenderer>();
+        negSprite.sortingOrder = 98;
+        negSprite.color = Color.red;
+        
+        // Add CircleCollider2D for trigger detection
+        CircleCollider2D collider = dragUnit.AddComponent<CircleCollider2D>();
+        collider.isTrigger = true;
+        collider.radius = 0.5f;
+        
+        // Assign the sprite renderers to the DragUnit component
+        scr_DragUnit dragUnitScript = dragUnit.GetComponent<scr_DragUnit>();
+        dragUnitScript.MySprite = mainSprite;
+        dragUnitScript.SpriteBase = baseSprite;
+        dragUnitScript.Negative = negSprite;
+        
+        // Set default sprite (will be overridden when used)
+        Sprite defaultSprite = Resources.Load<Sprite>("Units/Iconos/U_Ship_01");
+        if (defaultSprite != null)
+        {
+            mainSprite.sprite = defaultSprite;
+            baseSprite.sprite = defaultSprite;
+        }
+        
+        return dragUnit;
     }
 }

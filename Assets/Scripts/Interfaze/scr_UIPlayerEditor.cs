@@ -795,6 +795,10 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
 
     public void LoadIAMode()
     {
+        // Clear tutorial and practice flags to ensure this is regular AI mode
+        scr_StatsPlayer.Tutorial = false;
+        scr_StatsPlayer.Practice = false;
+        
         Loading.SetActive(true);
         ProgresLoadLevel = SceneManager.LoadSceneAsync("Mapa_vsIA");
         ProgresLoadLevel.allowSceneActivation = true;
