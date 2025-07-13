@@ -22,10 +22,18 @@ public class scr_Lang: MonoBehaviour {
         {
             language = "Spanish";
         }
+        
+        Debug.Log("Language system initialized with language: " + language + " (Op_Leng: " + scr_StatsPlayer.Op_Leng + ")");
 
         TextAsset textAsset = (TextAsset)Resources.Load("XML/UIStrings");
         XmlDocument xml = new XmlDocument();
         xml.LoadXml(textAsset.text);
+
+        // Initialize MyTitles array if it doesn't exist (for dev bypass mode)
+        if (scr_StatsPlayer.MyTitles == null)
+        {
+            scr_StatsPlayer.MyTitles = new bool[11];
+        }
 
         Titles = new string[scr_StatsPlayer.MyTitles.Length];
         UIS = new Hashtable();
@@ -74,21 +82,54 @@ public class scr_Lang: MonoBehaviour {
 
     public static string GetText(string key)
     {
-        return UIS[key].ToString();
+        if (UIS == null)
+        {
+            Debug.LogWarning("Language system not initialized, initializing now...");
+            setLanguage();
+        }
+        
+        if (UIS.ContainsKey(key))
+        {
+            string result = UIS[key].ToString();
+            Debug.Log("GetText: " + key + " -> " + result);
+            return result;
+        }
+        else
+        {
+            Debug.LogWarning("Language key not found: " + key + ", returning key as fallback");
+            return key;
+        }
     }
 
     public static string GetTitleInfo(int _id)
     {
+        if (Titles == null || _id >= Titles.Length)
+        {
+            Debug.LogWarning("Titles not initialized or invalid ID: " + _id);
+            return "Title " + _id;
+        }
         return Titles[_id];
     }
 
     public static string GetTitleName(int _id)
     {
-        return Titles[_id].Split('|')[0];
+        if (Titles == null || _id >= Titles.Length)
+        {
+            Debug.LogWarning("Titles not initialized or invalid ID: " + _id);
+            return "Title " + _id;
+        }
+        string[] parts = Titles[_id].Split('|');
+        return parts.Length > 0 ? parts[0] : "Title " + _id;
     }
 
     public static string GetTitleDescription(int _id)
     {
-        return Titles[_id].Split('|')[1];
+        if (Titles == null || _id >= Titles.Length)
+        {
+            Debug.LogWarning("Titles not initialized or invalid ID: " + _id);
+            return "Description for title " + _id;
+        }
+        string[] parts = Titles[_id].Split('|');
+        return parts.Length > 1 ? parts[1] : "Description for title " + _id;
     }
 }

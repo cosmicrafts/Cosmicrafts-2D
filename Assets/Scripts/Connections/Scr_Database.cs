@@ -849,6 +849,16 @@ public class Scr_Database : Photon.MonoBehaviour
         // Initialize missions (required for end-game processing)
         scr_Missions.InitMissions();
 
+        // Set language for dev bypass mode (default to English, but can be changed)
+        scr_StatsPlayer.Op_Leng = MyData.Leng; // Use saved language preference
+        if (scr_StatsPlayer.Op_Leng == 0) // If not set, default to English
+        {
+            scr_StatsPlayer.Op_Leng = 0; // 0 = English, 1 = Spanish
+        }
+        
+        // Re-initialize language system with the correct language
+        scr_Lang.setLanguage();
+
         // -------------------------------------------
 
         StateTextLog.text = "DEV LOGIN SUCCESS";

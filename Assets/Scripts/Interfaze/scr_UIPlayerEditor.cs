@@ -112,12 +112,48 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
 
     GameObject CurrentMenu;
 
+    // Helper method to set button text
+    void SetButtonText(Button button, string languageKey)
+    {
+        if (button == null) return;
+        
+        // Try multiple ways to find the Text component
+        Text buttonText = button.GetComponentInChildren<Text>();
+        if (buttonText == null)
+        {
+            // Try to find Text component in the button's children
+            Transform[] children = button.GetComponentsInChildren<Transform>();
+            foreach (Transform child in children)
+            {
+                buttonText = child.GetComponent<Text>();
+                if (buttonText != null) break;
+            }
+        }
+        
+        if (buttonText != null)
+        {
+            string translatedText = scr_Lang.GetText(languageKey);
+            buttonText.text = translatedText;
+            Debug.Log("Set button text: " + button.name + " -> " + translatedText + " (key: " + languageKey + ")");
+        }
+        else
+        {
+            Debug.LogWarning("Could not find Text component for button: " + button.name);
+        }
+    }
+
     void Start()
     {
         CurrentMenu = M_MainMenu;
         Menus.Push(M_MainMenu);
         scr_StatsPlayer.LastDateConection = System.DateTime.Now;
         scr_BDUpdate.f_UpdateLastConnection(scr_StatsPlayer.id, scr_StatsPlayer.LastDateConection);
+
+        // Ensure language system is initialized
+        if (scr_Lang.UIS == null)
+        {
+            scr_Lang.setLanguage();
+        }
 
         UpdateInfoFriends();
         UpdateHistoryMatchs();
@@ -476,11 +512,21 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
         {
             for (int j = 0; j < RewardsOrbs.Length; j++)
                 RewardsOrbs[j].gameObject.SetActive(false);
-            Cofre.Play("Entrada_Cofre");
+            
+            // Safety check for animator
+            if (Cofre != null && Cofre.gameObject.activeInHierarchy)
+                Cofre.Play("Entrada_Cofre");
+            
             OpenOrbe.SetActive(true);
             ButtonCloseOrbs.gameObject.SetActive(true);
             ButtonNextOrb.gameObject.SetActive(false);
-            LoBox.Play();
+            
+            // Set button texts using language system
+            SetButtonText(ButtonCloseOrbs, "txt_mn_action2");
+            SetButtonText(ButtonNextOrb, "txt_mn_action1");
+            
+            if (LoBox != null)
+                LoBox.Play();
             if (scr_StatsPlayer.Op_Music)
                 scr_Music.as_audio.Pause();
             if (scr_StatsPlayer.Orbes[cto] > 1)
@@ -502,12 +548,22 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
         {
             for (int j = 0; j < RewardsOrbs.Length; j++)
                 RewardsOrbs[j].gameObject.SetActive(false);
-            Cofre.Play("Entrada_Cofre");
+            
+            // Safety check for animator
+            if (Cofre != null && Cofre.gameObject.activeInHierarchy)
+                Cofre.Play("Entrada_Cofre");
+            
             OpenOrbe.SetActive(true);
             RemOrbs.gameObject.SetActive(false);
             ButtonCloseOrbs.gameObject.SetActive(false);
             ButtonNextOrb.gameObject.SetActive(false);
-            LoBox.Play();
+            
+            // Set button texts using language system
+            SetButtonText(ButtonCloseOrbs, "txt_mn_action2");
+            SetButtonText(ButtonNextOrb, "txt_mn_action1");
+            
+            if (LoBox != null)
+                LoBox.Play();
             if (scr_StatsPlayer.Op_Music)
                 scr_Music.as_audio.Pause();
         }
@@ -534,7 +590,11 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
                 scr_StatsPlayer.Orbes[cto]--;
                 scr_BDUpdate.f_SetOrbes(scr_StatsPlayer.id);
                 if (scr_StatsPlayer.Orbes[cto] > 0)
+                {
                     ButtonNextOrb.gameObject.SetActive(true);
+                    // Set button text
+                    SetButtonText(ButtonNextOrb, "txt_mn_action1");
+                }
                 else
                     ButtonNextOrb.gameObject.SetActive(false);
                 //Funcion de recompenzas
@@ -551,6 +611,8 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
                 }
             }
             ButtonCloseOrbs.gameObject.SetActive(true);
+            // Set close button text
+            SetButtonText(ButtonCloseOrbs, "txt_mn_action2");
             UpdateCoins();
         }
     }
@@ -558,7 +620,8 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
     public void f_CloseOrbe()
     {
         OkOpenOrbe = false;
-        LoBox.Stop();
+        if (LoBox != null)
+            LoBox.Stop();
         if (scr_StatsPlayer.Op_Music)
             scr_Music.as_audio.UnPause();
         OpenOrbe.SetActive(false);
@@ -567,7 +630,10 @@ public class scr_UIPlayerEditor : Photon.MonoBehaviour {
 
     public void f_NextOrbe()
     {
-        Cofre.Play("Entrada_Cofre");
+        // Safety check for animator
+        if (Cofre != null && Cofre.gameObject.activeInHierarchy)
+            Cofre.Play("Entrada_Cofre");
+        
         //Ocultamos los iconos
         for (int j = 0; j < RewardsOrbs.Length; j++)
             RewardsOrbs[j].gameObject.SetActive(false);
