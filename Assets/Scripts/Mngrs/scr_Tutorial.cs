@@ -66,13 +66,29 @@ public class scr_Tutorial : MonoBehaviour
                 break;
             case 11:
                 {
-                    CC.Cards[0].Is_Lock = false;
+                    // Unlock the skill card (U_Skill_02) when it appears in any slot
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (CC.Cards[i].Get_Ship() == "U_Skill_02")
+                        {
+                            CC.Cards[i].Is_Lock = false;
+                            break;
+                        }
+                    }
                     WhaitForSpawn = true;
                 }
                 break;
             case 12:
                 {
-                    CC.Cards[0].Is_Lock = true;
+                    // Lock the skill card again
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (CC.Cards[i].Get_Ship() == "U_Skill_02")
+                        {
+                            CC.Cards[i].Is_Lock = true;
+                            break;
+                        }
+                    }
                 }
                 break;
             case 14:

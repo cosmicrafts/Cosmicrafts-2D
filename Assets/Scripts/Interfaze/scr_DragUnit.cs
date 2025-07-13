@@ -39,7 +39,10 @@ public class scr_DragUnit : MonoBehaviour {
                 okPosition = true;
                 transform.GetChild(0).gameObject.SetActive(false);
             }
-            okPosition = scr_MNGame.GM.FreeSpawn;
+            else
+            {
+                okPosition = scr_MNGame.GM.FreeSpawn;
+            }
             if (i_team == 1)
             {
                 MySprite.flipX = true;
