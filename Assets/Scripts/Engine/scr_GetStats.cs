@@ -28,7 +28,13 @@ public class scr_GetStats : MonoBehaviour {
         if (node != null)
             result = node.InnerText;
         else
+        {
             result = DefaultUnit.SelectSingleNode(Prop).InnerText;
+            if (Prop == "Icon")
+            {
+                Debug.LogWarning("Unit '" + Name + "' not found in XML, using default icon: " + result);
+            }
+        }
         return result;
     }
 

@@ -142,12 +142,14 @@ public class scr_UIInfoUnit : MonoBehaviour {
             
         }
 
-        Sprite ico = Resources.Load<Sprite>("Units/Iconos/" + scr_GetStats.GetPropUnit(Unit, "Icon"));
+        string iconPath = "Units/Iconos/" + scr_GetStats.GetPropUnit(Unit, "Icon");
+        Sprite ico = Resources.Load<Sprite>(iconPath);
         if (ico!=null)
         {
             Image.sprite = ico;
         } else
         {
+            Debug.LogWarning("Unit icon not found for unit '" + Unit + "'. Icon path: " + iconPath + ". Using fallback icon.");
             Image.sprite = DefaultIcon;
         }
 

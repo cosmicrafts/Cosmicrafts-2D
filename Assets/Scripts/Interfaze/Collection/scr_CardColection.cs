@@ -132,11 +132,15 @@ public class scr_CardColection : MonoBehaviour
         {
             TXT_Name.text = s_name;
         }
-        Sprite ico = Resources.Load<Sprite>("Units/Iconos/" + scr_GetStats.GetPropUnit(s_idname, "Icon"));
+        string iconPath = "Units/Iconos/" + scr_GetStats.GetPropUnit(s_idname, "Icon");
+        Sprite ico = Resources.Load<Sprite>(iconPath);
         if (ico != null)
             SP_mysprite.sprite = ico;
         else
+        {
+            Debug.LogWarning("Unit icon not found for unit '" + s_idname + "'. Icon path: " + iconPath + ". Using fallback icon.");
             SP_mysprite.sprite = ManagerCards.NoIco;
+        }
     }
 
     public void ShowInfo()

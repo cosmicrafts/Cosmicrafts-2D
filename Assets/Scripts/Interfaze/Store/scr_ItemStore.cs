@@ -268,9 +268,14 @@ public class scr_ItemStore : MonoBehaviour {
         if (t_Amount)
             t_Amount.text = "+" + amount.ToString() + " " + scr_Lang.GetText("txt_mn_info115");
 
-        Sprite ico = Resources.Load<Sprite>("Units/Iconos/" + scr_GetStats.GetPropUnit(idname, "Icon"));
+        string iconPath = "Units/Iconos/" + scr_GetStats.GetPropUnit(idname, "Icon");
+        Sprite ico = Resources.Load<Sprite>(iconPath);
         if (ico != null && Icon)
             Icon.sprite = ico;
+        else if (Icon)
+        {
+            Debug.LogWarning("Unit icon not found for unit '" + idname + "'. Icon path: " + iconPath + ". Using fallback icon.");
+        }
     }
 
     public void UpdateToUnitsPack(int realcost, string namePack, Sprite _icon, string[] idnames)

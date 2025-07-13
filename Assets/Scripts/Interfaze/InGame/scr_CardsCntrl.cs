@@ -286,7 +286,12 @@ public class scr_CardsCntrl : MonoBehaviour {
                 sc.DragPreview = sall;
         }
 
-        sc.Icon = Resources.Load<Sprite>("Units/Iconos/" + scr_GetStats.GetPropUnit(id_unit, "Icon"));
+        string iconPath = "Units/Iconos/" + scr_GetStats.GetPropUnit(id_unit, "Icon");
+        sc.Icon = Resources.Load<Sprite>(iconPath);
+        if (sc.Icon == null)
+        {
+            Debug.LogWarning("Unit icon not found for unit '" + id_unit + "'. Icon path: " + iconPath + ". Using fallback icon.");
+        }
 
         int.TryParse(scr_GetStats.GetPropUnit(id_unit, "Poblation"), out sc.i_Pcost);
         int.TryParse(scr_GetStats.GetPropUnit(id_unit, "Cost"), out sc.i_Cost);
