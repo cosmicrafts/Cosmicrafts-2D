@@ -778,7 +778,7 @@ public class Scr_Database : Photon.MonoBehaviour
         // --- DEV: Initialize all player stats for UI compatibility ---
         scr_StatsPlayer.id = 999;
         scr_StatsPlayer.iduser = 999;
-        scr_StatsPlayer.Name = "DevPlayer";
+        scr_StatsPlayer.Name = "Guest";
         scr_StatsPlayer.Email = "dev@local.com";
         scr_StatsPlayer.Level = 10;
         scr_StatsPlayer.Xp = 5000;
